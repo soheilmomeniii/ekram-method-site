@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Ekram Method — header & footer options for v9</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#FBF8F1;--paper-2:#F4EFE3;--ink:#1B1A17;--ink-soft:#5C574C;--ink-faint:#8C8576;--accent:#8E2B20;--rule:#DAD2C0;--rule-soft:#E7E0D0;--rose:#E8C7C0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.shell{max-width:880px;margin:0 auto;padding:0 32px;}
+.top{border-bottom:1px solid var(--rule);}
+.top .shell{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 32px;}
+.mark{display:flex;align-items:center;gap:11px;}
+.mark .seal{width:30px;height:30px;color:var(--accent);}
+.mark .seal svg{width:100%;height:100%;display:block;}
+.mark .w{font-family:"Newsreader",serif;font-size:17px;font-weight:600;letter-spacing:-.01em;}
+.top .meta{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);}
+.intro{padding:46px 0 14px;}
+.intro .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);}
+.intro h1{font-family:"Newsreader",serif;font-weight:600;font-size:clamp(30px,4.6vw,44px);line-height:1.04;letter-spacing:-.02em;margin-top:14px;}
+.intro p{color:var(--ink-soft);font-size:18px;line-height:1.5;max-width:54ch;margin-top:14px;}
+.list{padding:24px 0 60px;border-top:1px solid var(--rule);margin-top:26px;}
+.opt{display:flex;align-items:center;justify-content:space-between;gap:22px;padding:22px 0;border-bottom:1px solid var(--rule-soft);transition:padding-left .18s ease;}
+.opt:hover{padding-left:8px;}
+.opt-l{display:flex;align-items:baseline;gap:18px;}
+.opt-num{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;color:var(--accent);flex:none;}
+.opt-name{font-family:"Newsreader",serif;font-size:24px;font-weight:600;letter-spacing:-.01em;}
+.opt-desc{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-top:6px;}
+.opt-go{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:2px;white-space:nowrap;flex:none;transition:color .16s,border-color .16s;}
+.opt:hover .opt-go{color:var(--accent);border-color:var(--accent);}
+.foot{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);padding-bottom:50px;}
+.foot a{color:var(--accent);border-bottom:1px solid var(--rule);}
+@media(max-width:560px){
+  .shell,.top .shell{padding-left:20px;padding-right:20px;}
+  .opt{flex-direction:column;align-items:flex-start;gap:12px;}
+  .opt-name{font-size:21px;}
+}
+</style>
+</head>
+<body>
+<header class="top"><div class="shell">
+  <div class="mark">
+    <span class="seal"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="100" cy="100" r="92" stroke-width="3" opacity=".85"/><circle cx="100" cy="100" r="58" stroke-width="4" opacity=".5"/><circle cx="100" cy="100" r="30" stroke-width="7" opacity=".9"/><line x1="100" y1="3" x2="100" y2="197" stroke-width="3" opacity=".3"/><line x1="3" y1="100" x2="197" y2="100" stroke-width="3" opacity=".3"/><circle cx="100" cy="100" r="9" fill="currentColor" stroke="none"/></svg></span>
+    <span class="w">The Ekram Method</span>
+  </div>
+  <div class="meta">Chrome studies</div>
+</div></header>
+
+<main class="shell">
+  <section class="intro">
+    <div class="eyebrow">Header &amp; Footer — pick one</div>
+    <h1>Four ways to top &amp; tail the page</h1>
+    <p>Same hero and book, four different headers and footers for the v9 product page. Open each, then tell me which to ship (or mix — e.g. the seal header + the signature footer).</p>
+  </section>
+
+  <section class="list">
+    <a class="opt" href="/v9-signature/">
+      <span class="opt-l"><span class="opt-num">01</span><span><span class="opt-name">The Signature</span><div class="opt-desc">Warm italic “Somo” sign-off · mark + wordmark header</div></span></span>
+      <span class="opt-go">View →</span>
+    </a>
+    <a class="opt" href="/v9-device/">
+      <span class="opt-l"><span class="opt-num">02</span><span><span class="opt-name">Maker’s Device</span><div class="opt-desc">Stamped colophon seal · logo lockup header</div></span></span>
+      <span class="opt-go">View →</span>
+    </a>
+    <a class="opt" href="/v9-backcover/">
+      <span class="opt-l"><span class="opt-num">03</span><span><span class="opt-name">Back Cover</span><div class="opt-desc">Pull-quote + barcode footer · oxblood headband</div></span></span>
+      <span class="opt-go">View →</span>
+    </a>
+    <a class="opt" href="/v9-luxe/">
+      <span class="opt-l"><span class="opt-num">04</span><span><span class="opt-name">Quiet Luxe</span><div class="opt-desc">Centered mark · minimal one-line sign-off</div></span></span>
+      <span class="opt-go">View →</span>
+    </a>
+  </section>
+
+  <div class="foot">Current live version: <a href="/v9/">/v9/</a></div>
+</main>
+</body>
+</html>
