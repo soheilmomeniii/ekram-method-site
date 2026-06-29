@@ -4,19 +4,31 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Ekram Method — Positioning and Narrative for Technology</title>
-<meta name="description" content="The Ekram Method — a practical handbook for positioning and narrative in technology. Built from Ekram's public work, reviewed and sharpened with him. Download the PDF.">
-<!-- Open Graph / Twitter -->
+<meta name="description" content="A practical handbook for positioning and narrative in technology — not branding theory, but a usable method for making a product inevitable. Built from Ekram's public work, then reviewed and sharpened with him. Free PDF, no signup.">
+<link rel="canonical" href="https://ekrambook.vercel.app/v9/">
+<meta name="theme-color" content="#FBF8F1">
+
+<!-- ===== Open Graph / Twitter ===== -->
 <meta property="og:type" content="book">
-<meta property="og:title" content="The Ekram Method — Positioning and Narrative for Technology">
-<meta property="og:description" content="A usable method for making a product inevitable. Built from Ekram's public work, then sharpened with him. Free PDF.">
 <meta property="og:site_name" content="The Ekram Method">
+<meta property="og:url" content="https://ekrambook.vercel.app/v9/">
+<meta property="og:title" content="The Ekram Method — Positioning and Narrative for Technology">
+<meta property="og:description" content="A usable method for making a product inevitable — not branding theory. Built from Ekram's public work, then sharpened with him. Free PDF.">
+<meta property="og:image" content="https://ekrambook.vercel.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Ekram Method — a handbook on positioning and narrative for technology.">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@somonaut">
 <meta name="twitter:creator" content="@somonaut">
 <meta name="twitter:title" content="The Ekram Method — Positioning and Narrative for Technology">
-<meta name="twitter:description" content="A usable method for making a product inevitable. Built from Ekram's public work, then sharpened with him. Free PDF.">
+<meta name="twitter:description" content="A usable method for making a product inevitable — not branding theory. Built from Ekram's public work, then sharpened with him. Free PDF.">
+<meta name="twitter:image" content="https://ekrambook.vercel.app/assets/og.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --paper:#FBF8F1; --paper-2:#F4EFE3; --ink:#1B1A17; --ink-soft:#5C574C;
@@ -24,134 +36,126 @@
   --rose:#E8C7C0; --rose-dim:#E6BDB5;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
 html{-webkit-text-size-adjust:100%;}
 body{
   background:var(--paper);color:var(--ink);
   font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.6;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  min-height:100vh;display:flex;flex-direction:column;
 }
-h1,h2,h3{font-family:"Newsreader",Georgia,serif;font-weight:600;line-height:1.06;letter-spacing:-.018em;text-wrap:balance;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;line-height:1.02;letter-spacing:-.02em;text-wrap:balance;}
 p{text-wrap:pretty;}
 a{color:inherit;text-decoration:none;}
-.mono{font-family:"IBM Plex Mono",monospace;}
-.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);}
-.shell{max-width:1180px;margin:0 auto;padding:0 40px;}
+.shell{max-width:1120px;margin:0 auto;padding:0 44px;width:100%;}
 
-/* ---------- TOP RULE / MASTHEAD ---------- */
-.masthead{border-bottom:1px solid var(--rule);}
-.masthead .shell{display:flex;justify-content:space-between;align-items:center;padding-top:22px;padding-bottom:22px;}
-.brandmark{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);}
-.brandmark b{color:var(--accent);font-weight:500;}
-.mh-meta{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px;}
+.btn.primary:focus-visible{outline:2px solid var(--ink);}
+
+/* ---------- MASTHEAD ---------- */
+.masthead{border-bottom:1px solid var(--rule);flex:none;}
+.masthead .shell{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;padding-bottom:20px;}
+.mh-imprint{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
+.mh-imprint b{color:var(--ink);font-weight:500;}
+.mh-ed{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);}
 
 /* ---------- HERO ---------- */
-.hero{padding:78px 0 72px;border-bottom:1px solid var(--rule);}
-.hero .shell{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center;}
-.hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
-.hero-eyebrow::after{content:"";flex:1;border-top:1px solid var(--rule);}
-.hero h1{font-size:clamp(46px,6vw,82px);line-height:.96;}
-.hero-sub{font-family:"Newsreader",serif;font-style:italic;font-weight:400;font-size:clamp(20px,2.6vw,27px);color:var(--accent);margin-top:18px;}
-.hero-prop{font-size:19px;line-height:1.55;color:var(--ink-soft);max-width:42ch;margin-top:24px;}
-.hero-prop b{color:var(--ink);font-weight:600;}
+.hero{flex:1 0 auto;display:flex;align-items:center;}
+.hero .shell{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,66px);align-items:center;padding-top:38px;padding-bottom:42px;}
 
-.cta-block{margin-top:38px;}
-.btn{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:16px 26px;border:1px solid var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:10px;white-space:nowrap;transition:background .15s,color .15s,border-color .15s;}
-.btn.primary{background:var(--accent);color:var(--paper);border-color:var(--accent);font-weight:500;}
+.eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);white-space:nowrap;}
+.eyebrow-row::after{content:"";flex:1;height:1px;background:var(--rule);}
+.hero-title{font-size:clamp(44px,5.7vw,76px);}
+.hero-sub{font-family:"Newsreader",serif;font-style:italic;font-weight:400;font-size:clamp(19px,2.4vw,25px);color:var(--accent);margin-top:16px;line-height:1.2;}
+.hero-desc{font-size:18px;line-height:1.5;color:var(--ink-soft);max-width:42ch;margin-top:22px;}
+.hero-desc b{color:var(--ink);font-weight:600;}
+
+/* ---------- ACTIONS ---------- */
+.actions{margin-top:32px;max-width:438px;}
+.btn{
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:500;letter-spacing:.1em;
+  text-transform:uppercase;padding:15px 18px;border:1px solid var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;white-space:nowrap;
+  transition:background .16s ease,color .16s ease,border-color .16s ease;
+}
+.btn .ar{opacity:.5;transition:opacity .16s ease,transform .16s ease;}
+.btn:hover .ar{opacity:1;transform:translateX(2px);}
+.btn.primary{background:var(--accent);color:var(--paper);border-color:var(--accent);font-size:12.5px;padding:17px 20px;}
+.btn.primary .ar{opacity:.8;}
 .btn.primary:hover{background:var(--ink);border-color:var(--ink);}
-.btn-secondary-row{display:flex;gap:26px;margin-top:22px;flex-wrap:wrap;}
-.link-action{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid var(--rule);padding-bottom:3px;transition:color .15s,border-color .15s;}
-.link-action:hover{color:var(--accent);border-color:var(--accent);}
-.cta-note{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:26px;}
+.btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;}
+.btn.ghost{background:transparent;color:var(--ink);}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.trust{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:18px;}
+.trust .sep{color:var(--rule);margin:0 7px;}
 
 /* ---------- BOOK MOCKUP ---------- */
-.book-stage{display:flex;justify-content:center;align-items:center;perspective:1600px;}
+.book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
 .book{
-  width:300px;aspect-ratio:1/1.42;position:relative;
-  transform:rotateY(-17deg) rotateX(2.5deg);transform-style:preserve-3d;
-  filter:drop-shadow(34px 40px 46px rgba(40,20,16,.30));
+  width:296px;aspect-ratio:1/1.42;position:relative;
+  transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;
+  filter:drop-shadow(24px 30px 38px rgba(40,20,16,.30));
 }
 .book-cover{
   position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;
   color:var(--rose);overflow:hidden;
   box-shadow:inset 0 0 70px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.08);
 }
-/* spine */
-.book::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:20px;
-  background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.08) 60%,rgba(255,255,255,.10));
+.book::before{ /* spine */
+  content:"";position:absolute;left:0;top:0;bottom:0;width:19px;
+  background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.07) 62%,rgba(255,255,255,.10));
   transform:translateZ(-1px);z-index:3;border-radius:2px 0 0 2px;
 }
-/* pages edge */
-.book::after{
-  content:"";position:absolute;right:-9px;top:5px;bottom:5px;width:11px;
+.book::after{ /* page edges */
+  content:"";position:absolute;right:-8px;top:5px;bottom:5px;width:10px;
   background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);
   transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;
 }
-.book-dial{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:118px;height:118px;color:var(--rose);}
+.bc-frame{position:absolute;inset:17px;border:1px solid rgba(232,199,192,.30);border-radius:2px;pointer-events:none;}
+.book-dial{position:absolute;top:30px;left:50%;transform:translateX(-50%);width:112px;height:112px;color:var(--rose);}
 .book-dial svg{width:100%;height:100%;}
-.bc-frame{position:absolute;inset:18px;border:1px solid rgba(232,199,192,.30);border-radius:2px;pointer-events:none;}
-.bc-kicker{position:absolute;top:160px;left:0;right:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose-dim);}
-.bc-title{position:absolute;left:26px;right:26px;bottom:64px;text-align:center;}
-.bc-title .t{font-family:"Newsreader",serif;font-weight:600;font-size:30px;line-height:1.02;color:var(--paper);}
-.bc-title .s{font-family:"Newsreader",serif;font-style:italic;font-size:13px;color:var(--rose);margin-top:10px;line-height:1.25;}
-.bc-author{position:absolute;left:0;right:0;bottom:30px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-dim);}
+.bc-kicker{position:absolute;top:156px;left:0;right:0;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--rose-dim);}
+.bc-title{position:absolute;left:26px;right:26px;bottom:62px;text-align:center;}
+.bc-title .t{font-family:"Newsreader",serif;font-weight:600;font-size:29px;line-height:1.02;color:var(--paper);letter-spacing:-.01em;}
+.bc-title .s{font-family:"Newsreader",serif;font-style:italic;font-size:12.5px;color:var(--rose);margin-top:11px;line-height:1.25;}
+.bc-author{position:absolute;left:0;right:0;bottom:29px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:var(--rose-dim);}
 
-/* ---------- VALUE PROPS ---------- */
-.props{border-bottom:1px solid var(--rule);}
-.props .shell{display:grid;grid-template-columns:repeat(3,1fr);}
-.prop{padding:48px 44px 50px;border-left:1px solid var(--rule);}
-.prop:first-child{border-left:none;padding-left:0;}
-.prop:last-child{padding-right:0;}
-.prop .p-num{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.18em;color:var(--accent);}
-.prop .p-label{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);margin:14px 0 12px;}
-.prop p{font-family:"Newsreader",serif;font-size:20px;line-height:1.34;color:var(--ink-soft);max-width:26ch;}
-
-/* ---------- MAKER'S NOTE ---------- */
-.note{padding:84px 0;}
-.note .shell{max-width:840px;}
-.note-card{border:1px solid var(--rule);background:var(--paper-2);padding:52px 56px;position:relative;}
-.note-label{display:flex;align-items:center;gap:14px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:30px;}
-.note-label::after{content:"";flex:1;border-top:1px solid var(--rule);}
-.note-card p{font-size:19px;line-height:1.62;color:var(--ink);max-width:58ch;}
-.note-card p + p{margin-top:1em;}
-.note-card .first{font-family:"Newsreader",serif;font-size:clamp(21px,2.6vw,26px);font-weight:500;line-height:1.34;letter-spacing:-.01em;max-width:30ch;color:var(--ink);}
-.note-sign{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:38px;padding-top:28px;border-top:1px solid var(--rule);flex-wrap:wrap;}
-.sig-name{font-family:"Newsreader",serif;font-style:italic;font-size:26px;color:var(--ink);}
-.sig-who a{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--accent);}
-.sig-who a:hover{text-decoration:underline;}
-.sig-who .role{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-top:5px;}
-.credit{text-align:right;}
-.credit .role{font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:5px;}
-.credit a{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.06em;color:var(--accent);}
-.credit a:hover{text-decoration:underline;}
-
-/* ---------- FOOTER ---------- */
-footer{background:var(--ink);color:var(--paper);padding:40px 0;}
-footer .shell{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
-.f-title{font-family:"Newsreader",serif;font-size:18px;color:var(--paper);}
-.f-title span{font-style:italic;color:var(--rose-dim);}
-.f-links{display:flex;gap:24px;font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;}
-.f-links a{color:var(--rose-dim);}
-.f-links a:hover{color:var(--paper);}
-.f-year{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--rose-dim);opacity:.6;}
+/* ---------- COLOPHON ---------- */
+.colophon{border-top:1px solid var(--rule);flex:none;}
+.colophon .shell{padding-top:22px;padding-bottom:24px;}
+.colo-line{
+  display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;color:var(--ink-faint);padding:11px 0;
+}
+.colo-line + .colo-line{border-top:1px solid var(--rule-soft);}
+.colo-line .label{text-transform:uppercase;letter-spacing:.18em;font-size:9.5px;flex:none;}
+.colo-line .val{color:var(--ink-soft);text-align:right;}
+.colo-line .val .name{font-family:"Newsreader",serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--ink);}
+.colo-line .val a{color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color .16s,border-color .16s;}
+.colo-line .val a:hover{color:var(--accent);border-color:var(--accent);}
+.colo-foot{
+  margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+}
+.colo-foot .dot{color:var(--rule);}
 
 /* ---------- RESPONSIVE ---------- */
-@media(max-width:960px){
-  .hero .shell{grid-template-columns:1fr;gap:54px;}
+@media(max-width:920px){
+  .hero .shell{grid-template-columns:1fr;gap:42px;padding-top:42px;padding-bottom:46px;}
   .book-stage{order:-1;}
-  .props .shell{grid-template-columns:1fr;}
-  .prop{border-left:none;border-top:1px solid var(--rule);padding:32px 0;}
-  .prop:first-child{border-top:none;padding-top:8px;}
+  .actions{max-width:none;}
+  .hero-desc{max-width:54ch;}
 }
-@media(max-width:520px){
+@media(max-width:560px){
   .shell{padding:0 22px;}
-  .hero{padding:50px 0 52px;}
-  .book{width:240px;}
+  .masthead .shell{gap:10px;}
+  .mh-ed{display:none;}
+  .book{width:236px;}
   .bc-title .t{font-size:25px;}
-  .note{padding:54px 0;}
-  .note-card{padding:34px 26px;}
-  .masthead .shell{flex-wrap:wrap;gap:8px;}
-  .btn{width:100%;}
+  .btn-row{grid-template-columns:1fr;}
+  .colo-line{flex-direction:column;gap:5px;}
+  .colo-line .val{text-align:left;}
 }
 </style>
 </head>
@@ -160,34 +164,38 @@ footer .shell{display:flex;justify-content:space-between;align-items:center;flex
 <!-- ===== MASTHEAD ===== -->
 <header class="masthead">
   <div class="shell">
-    <div class="brandmark"><b>The Ekram Method</b> &nbsp;·&nbsp; A Handbook</div>
-    <div class="mh-meta">Positioning &amp; Narrative</div>
+    <div class="mh-imprint">An imprint by <b>Somo</b></div>
+    <div class="mh-ed">The Handbook · MMXXVI</div>
   </div>
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero">
+<main class="hero">
   <div class="shell">
+
     <div class="hero-text">
-      <div class="hero-eyebrow"><span class="eyebrow">First Edition · Free</span></div>
-      <h1>The Ekram Method</h1>
-      <div class="hero-sub">Positioning and Narrative for Technology</div>
-      <p class="hero-prop">A practical handbook for positioning and narrative in technology. Not branding theory — <b>a usable method for making a product inevitable.</b></p>
-      <div class="cta-block">
-        <a class="btn primary" href="/downloads/The-Ekram-Method.pdf" download="The Ekram Method.pdf">Download PDF ↓</a>
-        <div class="btn-secondary-row">
-          <a class="link-action" href="/ekram-method/">Read online →</a>
-          <a class="link-action" href="/downloads/The-Ekram-Method.md" download="The Ekram Method.md">Download Markdown →</a>
+      <div class="eyebrow-row"><span class="eyebrow">First Edition · Free</span></div>
+      <h1 class="hero-title">The Ekram Method</h1>
+      <p class="hero-sub">Positioning and Narrative for Technology</p>
+      <p class="hero-desc">A practical handbook — not branding theory, but <b>a usable method for making a product inevitable.</b></p>
+
+      <div class="actions">
+        <a class="btn primary" href="/downloads/The-Ekram-Method.pdf" download="The Ekram Method.pdf">
+          <span>Download the handbook — PDF</span><span class="ar" aria-hidden="true">↓</span>
+        </a>
+        <div class="btn-row">
+          <a class="btn ghost" href="/ekram-method/"><span>Read online</span><span class="ar" aria-hidden="true">→</span></a>
+          <a class="btn ghost" href="/downloads/The-Ekram-Method.md" download="The Ekram Method.md"><span>Markdown</span><span class="ar" aria-hidden="true">↓</span></a>
         </div>
-        <div class="cta-note">PDF · ~2 MB &nbsp;/&nbsp; No signup</div>
+        <p class="trust">PDF<span class="sep">·</span>~2&nbsp;MB<span class="sep">·</span>No signup</p>
       </div>
     </div>
 
     <div class="book-stage">
-      <div class="book" role="img" aria-label="The Ekram Method — book cover">
+      <div class="book" role="img" aria-label="The Ekram Method — a handbook on positioning and narrative for technology. Oxblood cover with a dial mark.">
         <div class="book-cover">
           <div class="bc-frame"></div>
-          <div class="book-dial">
+          <div class="book-dial" aria-hidden="true">
             <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
               <circle cx="100" cy="100" r="30" fill="#FBF8F1" opacity="0.07" stroke="none"/>
               <circle cx="100" cy="100" r="86" stroke-width="0.45" opacity=".32"/>
@@ -207,65 +215,28 @@ footer .shell{display:flex;justify-content:space-between;align-items:center;flex
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- ===== VALUE PROPS ===== -->
-<section class="props">
-  <div class="shell">
-    <div class="prop">
-      <div class="p-num">01</div>
-      <div class="p-label">A method, not theory</div>
-      <p>Frameworks you can run on a real product, today — not abstractions about brand.</p>
-    </div>
-    <div class="prop">
-      <div class="p-num">02</div>
-      <div class="p-label">One worked example</div>
-      <p>The whole method applied end to end, so you see exactly how the pieces fit.</p>
-    </div>
-    <div class="prop">
-      <div class="p-num">03</div>
-      <div class="p-label">Steps, gates, tests</div>
-      <p>Concrete moves with checks at each stage — know when a position is actually working.</p>
-    </div>
   </div>
-</section>
+</main>
 
-<!-- ===== MAKER'S NOTE ===== -->
-<section class="note">
+<!-- ===== COLOPHON ===== -->
+<footer class="colophon">
   <div class="shell">
-    <div class="note-card">
-      <div class="note-label">Maker's Note</div>
-      <p class="first">Ekram's best thinking on positioning was scattered across interviews, posts, and replies — sharp, but never in one place.</p>
-      <p>So I gathered it, organized it into a method you can actually use, then went back to Ekram to review and sharpen every part of it. What you're downloading isn't a recap of his ideas — it's those ideas turned into a working handbook, with steps, gates, and a single example carried all the way through.</p>
-      <p>I built it as a practitioner, for practitioners. If it helps you make something inevitable, that's the whole point.</p>
-      <div class="note-sign">
-        <div>
-          <div class="sig-name">— Somo</div>
-          <div class="sig-who">
-            <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a>
-            <div class="role">Author &amp; Editor</div>
-          </div>
-        </div>
-        <div class="credit">
-          <div class="role">Source Method</div>
-          <a href="https://x.com/ekrahm" target="_blank" rel="noopener">Ekram · @ekrahm</a>
-        </div>
-      </div>
+    <div class="colo-line">
+      <span class="label">Imprint</span>
+      <span class="val"><span class="name">Somo</span> &nbsp;·&nbsp; <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a></span>
     </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="shell">
-    <div class="f-title">The Ekram Method <span>— a handbook</span></div>
-    <div class="f-links">
-      <a href="/downloads/The-Ekram-Method.pdf" download="The Ekram Method.pdf">Download PDF</a>
-      <a href="/ekram-method/">Read online</a>
-      <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a>
+    <div class="colo-line">
+      <span class="label">Source</span>
+      <span class="val">Built from the work of Ekram, reviewed &amp; sharpened with him &nbsp;·&nbsp; <a href="https://x.com/ekrahm" target="_blank" rel="noopener">@ekrahm</a></span>
     </div>
-    <div class="f-year">© 2026</div>
+    <div class="colo-foot">
+      <span>The Ekram Method</span>
+      <span class="dot">·</span>
+      <span>Set in Newsreader &amp; Source Serif</span>
+      <span class="dot">·</span>
+      <span>MMXXVI</span>
+    </div>
   </div>
 </footer>
 
