@@ -52,16 +52,17 @@ a{color:inherit;text-decoration:none;}
 a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:1px;}
 .btn.primary:focus-visible{outline:2px solid var(--ink);}
 
-/* ---------- MASTHEAD ---------- */
-.masthead{border-bottom:1px solid var(--rule);flex:none;}
-.masthead .shell{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:20px;padding-bottom:20px;}
-.mh-imprint{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);}
-.mh-imprint b{color:var(--ink);font-weight:500;}
-.mh-ed{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-faint);}
+/* ---------- MASTHEAD (Quiet Luxe) ---------- */
+.masthead{flex:none;}
+.masthead .shell{display:flex;justify-content:center;padding-top:26px;padding-bottom:12px;}
+.mh-lock{display:flex;align-items:center;gap:11px;}
+.mh-mark{width:23px;height:23px;color:var(--accent);flex:none;}
+.mh-mark svg{width:100%;height:100%;display:block;}
+.mh-word{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--ink);}
 
 /* ---------- HERO ---------- */
 .hero{flex:1 0 auto;display:flex;align-items:center;}
-.hero .shell{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,66px);align-items:center;padding-top:38px;padding-bottom:42px;}
+.hero .shell{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,66px);align-items:center;padding-top:30px;padding-bottom:38px;}
 
 .eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
 .eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);white-space:nowrap;}
@@ -121,41 +122,32 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 .bc-title .s{font-family:"Newsreader",serif;font-style:italic;font-size:12.5px;color:var(--rose);margin-top:11px;line-height:1.25;}
 .bc-author{position:absolute;left:0;right:0;bottom:29px;text-align:center;font-family:"IBM Plex Mono",monospace;font-size:8px;letter-spacing:.26em;text-transform:uppercase;color:var(--rose-dim);}
 
-/* ---------- COLOPHON ---------- */
-.colophon{border-top:1px solid var(--rule);flex:none;}
-.colophon .shell{padding-top:22px;padding-bottom:24px;}
-.colo-line{
-  display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;
-  font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.04em;color:var(--ink-faint);padding:11px 0;
-}
-.colo-line + .colo-line{border-top:1px solid var(--rule-soft);}
-.colo-line .label{text-transform:uppercase;letter-spacing:.18em;font-size:9.5px;flex:none;}
-.colo-line .val{color:var(--ink-soft);text-align:right;}
-.colo-line .val .name{font-family:"Newsreader",serif;font-style:italic;font-size:15px;letter-spacing:0;color:var(--ink);}
-.colo-line .val a{color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:1px;transition:color .16s,border-color .16s;}
-.colo-line .val a:hover{color:var(--accent);border-color:var(--accent);}
-.colo-foot{
-  margin-top:20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-  font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
-}
-.colo-foot .dot{color:var(--rule);}
+/* ---------- COLOPHON (Quiet Luxe) ---------- */
+.colophon{flex:none;}
+.colophon .shell{padding-top:16px;padding-bottom:32px;text-align:center;}
+.colo-mark{width:30px;height:30px;color:var(--accent);display:inline-block;margin-bottom:14px;}
+.colo-mark svg{width:100%;height:100%;display:block;}
+.colo-imprint{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+.colo-imprint b{color:var(--ink);font-weight:500;}
+.colo-imprint a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .16s;}
+.colo-imprint a:hover{border-color:var(--accent);}
+.colo-imprint .sep{color:var(--rule);margin:0 10px;}
+.colo-set{margin-top:11px;font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-faint);opacity:.8;}
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:920px){
-  .hero .shell{grid-template-columns:1fr;gap:42px;padding-top:42px;padding-bottom:46px;}
+  .hero .shell{grid-template-columns:1fr;gap:42px;padding-top:34px;padding-bottom:44px;}
   .book-stage{order:-1;}
   .actions{max-width:none;}
   .hero-desc{max-width:54ch;}
 }
 @media(max-width:560px){
   .shell{padding:0 22px;}
-  .masthead .shell{gap:10px;}
-  .mh-ed{display:none;}
   .book{width:236px;}
   .bc-title .t{font-size:25px;}
   .btn-row{grid-template-columns:1fr;}
-  .colo-line{flex-direction:column;gap:5px;}
-  .colo-line .val{text-align:left;}
+  .colo-imprint{line-height:1.8;}
+  .colo-imprint .sep{margin:0 7px;}
 }
 </style>
 </head>
@@ -164,8 +156,19 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 <!-- ===== MASTHEAD ===== -->
 <header class="masthead">
   <div class="shell">
-    <div class="mh-imprint">An imprint by <b>Somo</b></div>
-    <div class="mh-ed">The Handbook · MMXXVI</div>
+    <span class="mh-lock">
+      <span class="mh-mark">
+        <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" aria-hidden="true">
+          <circle cx="100" cy="100" r="92" stroke-width="3" opacity=".85"/>
+          <circle cx="100" cy="100" r="58" stroke-width="4" opacity=".5"/>
+          <circle cx="100" cy="100" r="30" stroke-width="7" opacity=".9"/>
+          <line x1="100" y1="3" x2="100" y2="197" stroke-width="3" opacity=".3"/>
+          <line x1="3" y1="100" x2="197" y2="100" stroke-width="3" opacity=".3"/>
+          <circle cx="100" cy="100" r="9" fill="currentColor" stroke="none"/>
+        </svg>
+      </span>
+      <span class="mh-word">The Ekram Method</span>
+    </span>
   </div>
 </header>
 
@@ -222,21 +225,18 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 <!-- ===== COLOPHON ===== -->
 <footer class="colophon">
   <div class="shell">
-    <div class="colo-line">
-      <span class="label">Imprint</span>
-      <span class="val"><span class="name">Somo</span> &nbsp;·&nbsp; <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a></span>
-    </div>
-    <div class="colo-line">
-      <span class="label">Source</span>
-      <span class="val">Built from the work of Ekram, reviewed &amp; sharpened with him &nbsp;·&nbsp; <a href="https://x.com/ekrahm" target="_blank" rel="noopener">@ekrahm</a></span>
-    </div>
-    <div class="colo-foot">
-      <span>The Ekram Method</span>
-      <span class="dot">·</span>
-      <span>Set in Newsreader &amp; Source Serif</span>
-      <span class="dot">·</span>
-      <span>MMXXVI</span>
-    </div>
+    <span class="colo-mark" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
+        <circle cx="100" cy="100" r="92" stroke-width="3" opacity=".85"/>
+        <circle cx="100" cy="100" r="58" stroke-width="4" opacity=".5"/>
+        <circle cx="100" cy="100" r="30" stroke-width="7" opacity=".9"/>
+        <line x1="100" y1="3" x2="100" y2="197" stroke-width="3" opacity=".3"/>
+        <line x1="3" y1="100" x2="197" y2="100" stroke-width="3" opacity=".3"/>
+        <circle cx="100" cy="100" r="9" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+    <div class="colo-imprint">An imprint by <b>Somo</b> · <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a><span class="sep">—</span>after the work of Ekram · <a href="https://x.com/ekrahm" target="_blank" rel="noopener">@ekrahm</a></div>
+    <div class="colo-set">MMXXVI · Set in Newsreader &amp; Source Serif</div>
   </div>
 </footer>
 
