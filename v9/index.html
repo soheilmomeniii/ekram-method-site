@@ -91,10 +91,6 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 .btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px;}
 .btn.ghost{background:transparent;color:var(--ink);}
 .btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
-.btn.soon{width:100%;margin-top:10px;-webkit-appearance:none;appearance:none;border-style:dashed;border-color:var(--rule);color:var(--ink-faint);background:transparent;cursor:not-allowed;}
-.btn.soon:hover{background:transparent;color:var(--ink-faint);border-color:var(--rule);}
-.btn.soon .soon-ext{opacity:.6;}
-.soon-tag{font-family:"IBM Plex Mono",monospace;font-size:9px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:2px;padding:3px 7px;line-height:1;}
 .trust{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:18px;}
 .trust .sep{color:var(--rule);margin:0 7px;}
 
@@ -103,7 +99,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 .book{
   width:296px;aspect-ratio:1/1.42;position:relative;
   transform:rotateY(-18deg) rotateX(2.5deg);transform-style:preserve-3d;
-  filter:drop-shadow(24px 30px 38px rgba(40,20,16,.30));
+  filter:drop-shadow(13px 17px 22px rgba(40,20,16,.34));
 }
 .book-cover{
   position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;
@@ -132,9 +128,9 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 /* ---------- COLOPHON (Quiet Luxe) ---------- */
 .colophon{flex:none;}
 .colophon .shell{padding-top:16px;padding-bottom:32px;text-align:center;}
-.colo-mark{width:30px;height:30px;color:var(--accent);display:inline-block;margin-bottom:14px;}
+.colo-mark{width:33px;height:33px;color:var(--accent);display:inline-block;margin-bottom:15px;}
 .colo-mark svg{width:100%;height:100%;display:block;}
-.colo-imprint{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
+.colo-imprint{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);}
 .colo-imprint b{color:var(--ink);font-weight:500;}
 .colo-imprint a{color:var(--accent);border-bottom:1px solid transparent;transition:border-color .16s;}
 .colo-imprint a:hover{border-color:var(--accent);}
@@ -197,9 +193,6 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
           <a class="btn ghost read-online" href="/ekram-method/"><span>Read online</span><span class="ar" aria-hidden="true">→</span></a>
           <a class="btn ghost" href="/downloads/The-Ekram-Method.md" download="The Ekram Method.md"><span>MD for your agent</span><span class="ar" aria-hidden="true">↓</span></a>
         </div>
-        <button class="btn ghost soon" type="button" disabled aria-label="The Ekram Method Skill — coming soon">
-          <span>Ekram Method Skill<span class="soon-ext">.md</span></span><span class="soon-tag">Soon</span>
-        </button>
         <p class="trust">PDF<span class="sep">·</span>~2&nbsp;MB<span class="sep">·</span>No signup</p>
       </div>
     </div>
