@@ -28,11 +28,26 @@
 <meta name="twitter:description" content="In the AI era anyone can build — so positioning, not execution, is the edge. A first-principles positioning method for founders. Free PDF.">
 <meta name="twitter:image" content="https://ekrammethod.com/assets/og.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600&family=IBM+Plex+Mono:wght@400;500;700&family=Anton&display=swap" rel="stylesheet">
+<!-- Self-hosted fonts (no external requests) -->
+<link rel="preload" href="/fonts/newsreader-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sourceserif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/plexmono-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/anton-400.woff2') format('woff2');}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/newsreader-400.woff2') format('woff2');}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/newsreader-400i.woff2') format('woff2');}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/newsreader-500.woff2') format('woff2');}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/newsreader-600.woff2') format('woff2');}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/newsreader-700.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/sourceserif-400.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/sourceserif-400i.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/sourceserif-500.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/sourceserif-600.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/plexmono-400.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/plexmono-500.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/plexmono-700.woff2') format('woff2');}
 :root{
   --paper:#FDFDFD; --paper-2:#F4F4F3; --ink:#1B1A17; --ink-soft:#5C574C;
   --ink-faint:#8C8576; --accent:#DA1C27; --rule:#E4E3E0; --rule-soft:#EEEEEB;
@@ -93,6 +108,8 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
 .btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
 .trust{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:18px;}
 .trust .sep{color:var(--rule);margin:0 7px;}
+.share-x{color:var(--ink-faint);border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
+.share-x:hover{color:var(--accent);border-color:var(--accent);}
 
 /* ---------- BOOK MOCKUP ---------- */
 .book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;}
@@ -193,7 +210,7 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
           <a class="btn ghost read-online" href="/ekram-method/?v=fieldmanual"><span>Read online</span><span class="ar" aria-hidden="true">→</span></a>
           <a class="btn ghost" href="/downloads/The-Ekram-Method.md" download="The Ekram Method.md"><span>MD for your agent</span><span class="ar" aria-hidden="true">↓</span></a>
         </div>
-        <p class="trust">PDF<span class="sep">·</span>~0.8&nbsp;MB<span class="sep">·</span>No signup</p>
+        <p class="trust">PDF<span class="sep">·</span>~0.8&nbsp;MB<span class="sep">·</span>No signup<span class="sep">·</span><a class="share-x" href="https://twitter.com/intent/tweet?text=AI%20made%20building%20easy%20%E2%80%94%20not%20standing%20out.%20The%20Ekram%20Method%20is%20a%20free%20field%20manual%20on%20positioning%20to%20win%20in%20the%20AI%20era%3A&url=https%3A%2F%2Fekrammethod.com" target="_blank" rel="noopener" aria-label="Share on X">Share on X ↗</a></p>
       </div>
     </div>
 
@@ -233,5 +250,16 @@ a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offse
   </div>
 </footer>
 
+<!-- Vercel Web Analytics (enable in Project → Analytics) + download events -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var map=[['a[href$=".pdf"]','download_pdf'],['a[href$=".md"]','download_md'],['.read-online','read_online'],['.share-x','share_x']];
+  map.forEach(function(m){document.querySelectorAll(m[0]).forEach(function(el){
+    el.addEventListener('click',function(){try{window.va('event',{name:m[1]});}catch(e){}});
+  });});
+});
+</script>
 </body>
 </html>
