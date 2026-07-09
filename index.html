@@ -98,6 +98,8 @@ a{color:inherit;text-decoration:none;}
 .btn.ghost{background:transparent;color:var(--ink);}
 .btn.ghost:hover{background:var(--panel);}
 .btn.ghost:hover .ar{color:var(--ink);}
+.btn.soon{background:#F7F7F6;border:1px solid var(--line);color:var(--mid);cursor:default;}
+.btn.soon .soon-tag{font-family:"Jost",sans-serif;font-size:10px;letter-spacing:.14em;color:var(--mid);border:1px solid var(--line);border-radius:2px;padding:3px 7px;}
 .trust{font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-top:20px;}
 .trust .sep{color:var(--line);margin:0 8px;}
 .trust a{border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
@@ -217,9 +219,9 @@ a{color:inherit;text-decoration:none;}
       <p class="hero-desc">Anyone can build now. Almost no one gets chosen. When execution is free, <b>positioning is the only edge left</b>. This is the field manual for winning it.</p>
 
       <div class="actions">
-        <a class="btn primary" href="/downloads/The-Ekram-Method.pdf" download="The Ekram Method.pdf">
-          <span>Download the Book PDF</span><span class="ar" aria-hidden="true">↓</span>
-        </a>
+        <span class="btn soon" role="button" aria-disabled="true" title="The Book PDF goes live Monday">
+          <span>Download the Book PDF</span><span class="soon-tag">Available Monday</span>
+        </span>
         <div class="btn-row">
           <a class="btn ghost" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Download the Skill for your agent</span><span class="ar" aria-hidden="true">↗</span></a>
         </div>
