@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Ekram Method — Positioning to Win in the AI Era</title>
+<meta name="description" content="In the AI era anyone can build, so positioning is the edge. The Ekram Method is a first-principles positioning method for founders. Free PDF, no signup.">
+<link rel="canonical" href="https://ekrammethod.com/">
+<meta name="theme-color" content="#141518">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- ===== Open Graph / Twitter ===== -->
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="The Ekram Method">
+<meta property="og:url" content="https://ekrammethod.com/">
+<meta property="og:title" content="The Ekram Method — Positioning to Win in the AI Era">
+<meta property="og:description" content="In the AI era anyone can build, so positioning is the edge. A first-principles positioning method for founders. Free PDF.">
+<meta property="og:image" content="https://ekrammethod.com/assets/og-3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Ekram Method — positioning to win in the AI era.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@somonaut">
+<meta name="twitter:creator" content="@somonaut">
+<meta name="twitter:title" content="The Ekram Method — Positioning to Win in the AI Era">
+<meta name="twitter:description" content="In the AI era anyone can build, so positioning is the edge. A first-principles positioning method for founders. Free PDF.">
+<meta name="twitter:image" content="https://ekrammethod.com/assets/og-3.png">
+
+<link rel="preload" href="/fonts/jost-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/jost-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sourceserif-400.woff2" as="font" type="font/woff2" crossorigin>
+
+<style>
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/jost-300.woff2') format('woff2');}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/jost-400.woff2') format('woff2');}
+@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/jost-500.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/sourceserif-400.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/sourceserif-400i.woff2') format('woff2');}
+@font-face{font-family:'Source Serif 4';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/sourceserif-600.woff2') format('woff2');}
+/* book object fonts (kept) */
+@font-face{font-family:'Anton';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/anton-400.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/plexmono-400.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/plexmono-500.woff2') format('woff2');}
+@font-face{font-family:'IBM Plex Mono';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/plexmono-700.woff2') format('woff2');}
+
+:root{
+  --paper:#FFFFFF; --panel:#ECECEC; --mid:#9C9DA1; --slate:#2C2E35; --ink:#14150F;
+  --line:#E6E6E6; --accent:#DA1C27; --cover-cream:#F0E9D6;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{overflow-x:hidden;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Source Serif 4",Georgia,serif;font-size:17px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  min-height:100vh;display:flex;flex-direction:column;
+}
+a{color:inherit;text-decoration:none;}
+.shell{max-width:1120px;margin:0 auto;padding:0 44px;width:100%;}
+.disp{font-family:"Jost",system-ui,sans-serif;}
+.caps{text-transform:uppercase;letter-spacing:.24em;}
+
+/* ---------- MASTHEAD ---------- */
+.masthead{flex:none;border-bottom:1px solid var(--line);}
+.masthead .shell{display:flex;flex-direction:column;align-items:center;gap:9px;padding:22px 44px 18px;}
+.mh-mark{width:30px;height:30px;color:var(--ink);}
+.mh-mark svg{width:100%;height:100%;display:block;}
+.mh-word{font-family:"Jost",sans-serif;font-weight:400;font-size:13px;letter-spacing:.42em;text-transform:uppercase;color:var(--ink);padding-left:.42em;}
+
+/* ---------- HERO ---------- */
+.hero{flex:1 0 auto;display:flex;align-items:center;}
+.hero .shell{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,70px);align-items:center;padding-top:56px;padding-bottom:56px;}
+.eyebrow-row{display:flex;align-items:center;gap:16px;margin-bottom:26px;}
+.eyebrow{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);white-space:nowrap;}
+.eyebrow-row::after{content:"";flex:1;height:1px;background:var(--line);}
+.hero-title{font-family:"Jost",sans-serif;font-weight:300;font-size:clamp(46px,6.4vw,82px);line-height:1.0;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);}
+.hero-sub{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(19px,2.3vw,24px);color:var(--slate);margin-top:20px;line-height:1.25;}
+.hero-desc{font-size:18px;line-height:1.55;color:#4A4A46;max-width:44ch;margin-top:22px;}
+.hero-desc b{color:var(--ink);font-weight:600;}
+
+/* ---------- ACTIONS ---------- */
+.actions{margin-top:34px;max-width:452px;}
+.btn{
+  font-family:"Jost",sans-serif;font-size:12px;font-weight:500;letter-spacing:.18em;
+  text-transform:uppercase;padding:16px 20px;border:1px solid var(--ink);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;white-space:nowrap;
+  transition:background .16s ease,color .16s ease;
+}
+.btn .ar{color:var(--mid);transition:color .16s,transform .16s;}
+.btn:hover .ar{transform:translateX(2px);}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.btn.primary .ar{color:rgba(255,255,255,.6);}
+.btn.primary:hover{background:var(--slate);border-color:var(--slate);}
+.btn-row{display:grid;grid-template-columns:1fr;gap:10px;margin-top:10px;}
+.btn.ghost{background:transparent;color:var(--ink);}
+.btn.ghost:hover{background:var(--panel);}
+.btn.ghost:hover .ar{color:var(--ink);}
+.btn.soon{background:#F7F7F6;border:1px solid var(--line);color:var(--mid);cursor:default;}
+.btn.soon .soon-tag{font-family:"Jost",sans-serif;font-size:10px;letter-spacing:.14em;color:var(--mid);border:1px solid var(--line);border-radius:2px;padding:3px 7px;}
+.trust{font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-top:20px;}
+.trust .sep{color:var(--line);margin:0 8px;}
+.trust a{border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
+.trust a:hover{color:var(--ink);border-color:var(--ink);}
+
+/* ---------- BOOK (the one object of colour) ---------- */
+.book-stage{display:flex;justify-content:center;align-items:center;perspective:1700px;animation:bookIn .85s cubic-bezier(.2,.7,.2,1) both, floaty 6.5s ease-in-out .95s infinite;}
+@keyframes bookIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes floaty{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
+.book{width:296px;aspect-ratio:1/1.5;position:relative;transform:rotateY(-18deg) rotateX(2.5deg) scale(1.13);transform-style:preserve-3d;filter:drop-shadow(14px 20px 26px rgba(20,21,15,.26));transition:transform .28s cubic-bezier(.2,.7,.2,1);will-change:transform;}
+@media (prefers-reduced-motion:reduce){.book-stage{animation:none;}.book{transition:none;}}
+.book-cover{position:absolute;inset:0;background:var(--accent);border-radius:2px 4px 4px 2px;overflow:hidden;box-shadow:inset -16px 0 34px rgba(0,0,0,.13), inset 0 1px 0 rgba(255,255,255,.05);}
+.book::before{content:"";position:absolute;left:0;top:0;bottom:0;width:18px;background:linear-gradient(90deg,rgba(0,0,0,.42),rgba(0,0,0,.07) 62%,rgba(255,255,255,.10));transform:translateZ(-1px);z-index:3;border-radius:2px 0 0 2px;}
+.book::after{content:"";position:absolute;right:-8px;top:5px;bottom:5px;width:10px;background:repeating-linear-gradient(90deg,#efe7d4,#efe7d4 1px,#d8cfba 2px,#efe7d4 3px);transform:rotateY(34deg);transform-origin:left center;border-radius:0 2px 2px 0;}
+.nc-top{position:absolute;top:26px;left:20px;right:52px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cover-cream);line-height:1;}
+.nc-title{position:absolute;left:20px;top:86px;display:flex;flex-direction:column;}
+.nc-title .tl{font-family:"Anton",sans-serif;font-weight:400;font-size:62px;line-height:.86;text-transform:uppercase;color:var(--cover-cream);transform:scaleX(.94);transform-origin:left top;}
+.nc-title .rl{width:42px;height:2px;background:var(--cover-cream);margin:8px 0;}
+.nc-tag{position:absolute;left:20px;bottom:70px;font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:11px;line-height:1.35;color:var(--cover-cream);}
+.nc-tagrule{position:absolute;left:20px;bottom:58px;width:42px;height:1.5px;background:var(--cover-cream);}
+.nc-by{position:absolute;left:20px;bottom:20px;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:8.3px;letter-spacing:.03em;line-height:1.55;}
+.nc-by .b1{display:block;color:var(--cover-cream);}
+.nc-by .b2{display:block;color:rgba(240,233,214,.5);}
+.nc-axisline{position:absolute;top:22px;bottom:22px;right:56px;width:1.4px;background:var(--cover-cream);}
+.nc-arrow{position:absolute;top:16px;right:52px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:9px solid var(--cover-cream);}
+.nc-dot{position:absolute;top:342px;right:51px;width:12px;height:12px;border-radius:50%;background:var(--cover-cream);}
+.nc-vlabel{position:absolute;writing-mode:vertical-rl;transform:rotate(180deg);font-family:"IBM Plex Mono",monospace;font-weight:700;font-size:19.5px;letter-spacing:.10em;text-transform:uppercase;line-height:1;white-space:nowrap;}
+.nc-inev{top:20px;right:14px;color:var(--cover-cream);}
+.nc-invis{bottom:12px;right:16px;color:#A8141E;}
+
+/* ---------- DIVIDER (the only texture) ---------- */
+.rule-bar{height:8px;background:linear-gradient(90deg,var(--ink),var(--paper));}
+
+/* ---------- DIAGRAM BAND (signature move) ---------- */
+.diagram{flex:none;background:var(--paper);}
+.diagram .shell{padding:60px 44px 66px;}
+.dgm-cap{font-family:"Jost",sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);text-align:center;}
+.dgm-ref{font-family:"Jost",sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);text-align:center;margin-top:8px;}
+.dgm-wrap{max-width:720px;margin:26px auto 0;}
+.dgm-wrap svg{width:100%;height:auto;display:block;}
+.dgm-ends{display:flex;justify-content:space-between;max-width:720px;margin:10px auto 0;font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;}
+.dgm-ends .lo{color:var(--mid);} .dgm-ends .hi{color:var(--ink);}
+
+/* ---------- PULL-QUOTE BLOCK ---------- */
+.pull{flex:none;}
+.pull .shell{padding:56px 44px 60px;}
+.pullbox{background:var(--panel);border-left:5px solid var(--slate);padding:34px 40px;max-width:820px;margin:0 auto;}
+.pullbox q{font-family:"Source Serif 4",serif;font-weight:400;font-size:clamp(21px,2.6vw,28px);line-height:1.32;color:var(--ink);quotes:none;}
+.pullbox q:before,.pullbox q:after{content:"";}
+.pull-src{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);margin-top:16px;}
+
+/* ---------- SECTION HEADS ---------- */
+.sec-h{font-family:"Jost",sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink);text-align:center;}
+.sec-sub{font-family:"Source Serif 4",serif;font-style:italic;font-size:19px;color:var(--slate);text-align:center;margin-top:10px;}
+
+/* ---------- WHAT'S INSIDE (five moves) ---------- */
+.inside{flex:none;}
+.inside .shell{padding:62px 44px 8px;}
+.moves{max-width:760px;margin:36px auto 0;}
+.move{display:grid;grid-template-columns:60px 1fr;gap:24px;padding:22px 4px;border-top:1px solid var(--line);}
+.move:last-of-type{border-bottom:1px solid var(--line);}
+.move .no{font-family:"Jost",sans-serif;font-weight:300;font-size:26px;letter-spacing:.02em;color:var(--mid);line-height:1;}
+.move .nm{font-family:"Jost",sans-serif;font-weight:500;font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink);}
+.move .gl{font-family:"Source Serif 4",serif;font-size:17px;color:#4A4A46;margin-top:6px;line-height:1.5;}
+.inside-foot{max-width:760px;margin:22px auto 0;font-family:"Source Serif 4",serif;font-style:italic;font-size:15.5px;color:var(--mid);text-align:center;line-height:1.5;}
+
+/* ---------- PRAISE (placeholder slots) ---------- */
+.praise{flex:none;}
+.praise .shell{padding:58px 44px 6px;}
+.praise-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:900px;margin:32px auto 0;}
+.slot{border:1px dashed #BFC0C4;padding:26px 28px;background:#FCFCFC;}
+.slot.feat{grid-column:1 / -1;}
+.slot .ph{font-family:"Source Serif 4",serif;font-style:italic;font-size:18px;color:#8A8B8F;line-height:1.42;}
+.slot .who{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);margin-top:14px;}
+.praise-note{max-width:900px;margin:18px auto 0;text-align:center;font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#B7B8BC;}
+
+/* ---------- FORMATS ---------- */
+.formats{font-family:"Jost",sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-top:12px;}
+.formats .soon{color:#C4C4C8;}
+
+/* ---------- COLOPHON ---------- */
+.colophon{flex:none;border-top:1px solid var(--line);}
+.colophon .shell{padding:26px 44px 34px;text-align:center;}
+.colo-mark{width:28px;height:28px;color:var(--ink);display:inline-block;margin-bottom:13px;}
+.colo-mark svg{width:100%;height:100%;display:block;}
+.colo-imprint{font-family:"Jost",sans-serif;font-weight:400;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);line-height:2;}
+.colo-imprint b{color:var(--ink);font-weight:500;}
+.colo-imprint a{color:var(--ink);border-bottom:1px solid transparent;transition:border-color .16s;}
+.colo-imprint a:hover{border-color:var(--ink);}
+.colo-imprint .sep{color:var(--line);margin:0 9px;}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:920px){
+  .hero .shell{grid-template-columns:1fr;gap:40px;padding-top:40px;padding-bottom:48px;}
+  .book-stage{order:2;}
+  .actions{max-width:none;}
+  .hero-desc{max-width:56ch;}
+}
+@media(max-width:560px){
+  .shell{padding:0 22px;}
+  .btn{font-size:11px;letter-spacing:.12em;padding:15px 18px;}
+  .book{transform:rotateY(-16deg) rotateX(2deg) scale(.84);}
+  .btn-row{grid-template-columns:1fr;}
+  .praise-grid{grid-template-columns:1fr;}
+  .move{grid-template-columns:44px 1fr;gap:16px;}
+  .masthead .shell,.diagram .shell,.pull .shell,.colophon .shell,.inside .shell,.praise .shell{padding-left:22px;padding-right:22px;}
+  .colo-imprint{line-height:1.9;}
+}
+</style>
+<style>
+/* ===== DARK PREVIEW OVERRIDE ===== */
+:root{
+  --paper:#141518; --panel:#212228; --mid:#9A9BA1; --slate:#AEB1B8;
+  --ink:#EDEBE4; --line:#2A2B31;
+}
+.hero-desc{color:#B7B5AE;}
+.btn.soon{background:#1C1D22;border-color:#2A2B31;color:#8E8F95;}
+.btn.soon .soon-tag{border-color:#34353B;color:#8E8F95;}
+.book{filter:drop-shadow(14px 22px 32px rgba(0,0,0,.55));}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<main class="hero">
+  <div class="shell">
+    <div class="hero-text">
+      <div class="eyebrow-row"><span class="eyebrow">First Edition · Free</span></div>
+      <h1 class="hero-title">The Ekram<br>Method</h1>
+      <p class="hero-sub">Positioning to win in the AI era</p>
+      <p class="hero-desc">Anyone can build now. Almost no one gets chosen. When execution is free, <b>positioning is the only edge left</b>. This is the field manual for winning it.</p>
+
+      <div class="actions">
+        <span class="btn soon" role="button" aria-disabled="true" title="The Book PDF goes live Monday">
+          <span>Download the Book PDF</span><span class="soon-tag">Available Monday</span>
+        </span>
+        <div class="btn-row">
+          <a class="btn ghost" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Download the Skill for your agent</span><span class="ar" aria-hidden="true">↗</span></a>
+        </div>
+        <p class="trust">PDF<span class="sep">·</span>~0.8&nbsp;MB<span class="sep">·</span>No signup<span class="sep">·</span><a href="https://twitter.com/intent/tweet?text=AI%20made%20building%20easy.%20It%20made%20standing%20out%20the%20hard%20part.%20The%20Ekram%20Method%20is%20a%20free%20field%20manual%20on%20positioning%20in%20the%20AI%20era.%20No%20signup%3A&url=https%3A%2F%2Fekrammethod.com" target="_blank" rel="noopener">Share on X ↗</a></p>      </div>
+    </div>
+
+    <div class="book-stage">
+      <div class="book" role="img" aria-label="The Ekram Method — red book cover with the title in heavy type and an invisible-to-inevitable axis.">
+        <div class="book-cover">
+          <div class="nc-top">Position or be positioned</div>
+          <div class="nc-title"><span class="tl">THE</span><span class="rl"></span><span class="tl">EKRAM</span><span class="rl"></span><span class="tl">METHOD</span></div>
+          <div class="nc-tag">Positioning to win<br>in the AI&nbsp;era</div>
+          <div class="nc-tagrule"></div>
+          <div class="nc-by"><span class="b1">The collected thinking of Ekram</span><span class="b2">Compiled by Somo</span></div>
+          <div class="nc-vlabel nc-inev">Inevitable</div>
+          <div class="nc-vlabel nc-invis">Invisible</div>
+          <div class="nc-axisline"></div>
+          <div class="nc-arrow"></div>
+          <div class="nc-dot"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- ===== COLOPHON ===== -->
+<footer class="colophon">
+  <div class="shell">
+    <span class="colo-mark" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
+        <circle cx="100" cy="100" r="92" stroke-width="3" opacity=".85"/>
+        <circle cx="100" cy="100" r="58" stroke-width="4" opacity=".5"/>
+        <circle cx="100" cy="100" r="30" stroke-width="7" opacity=".9"/>
+        <line x1="100" y1="3" x2="100" y2="197" stroke-width="3" opacity=".3"/>
+        <line x1="3" y1="100" x2="197" y2="100" stroke-width="3" opacity=".3"/>
+        <circle cx="100" cy="100" r="9" fill="currentColor" stroke="none"/>
+      </svg>
+    </span>
+    <div class="colo-imprint">The collected thinking of <a href="https://x.com/ekrahm" target="_blank" rel="noopener">@ekrahm</a><br>Compiled by <a href="https://x.com/somonaut?s=11" target="_blank" rel="noopener">@somonaut</a></div>
+  </div>
+</footer>
+
+<!-- Vercel Web Analytics (enable in Project → Analytics) + download events -->
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var map=[['a[href$=".pdf"]','download_pdf'],['a[href*="skills.sh"]','open_skill'],['a[href*="intent/tweet"]','share_x']];
+  map.forEach(function(m){document.querySelectorAll(m[0]).forEach(function(el){
+    el.addEventListener('click',function(){try{window.va('event',{name:m[1]});}catch(e){}});
+  });});
+});
+</script>
+<script>
+/* Cursor-parallax tilt on the book (pointer devices, motion allowed) */
+(function(){
+  var book=document.querySelector('.book'), hero=document.querySelector('.hero');
+  if(!book||!hero) return;
+  var mm=window.matchMedia;
+  if(mm&&(mm('(prefers-reduced-motion: reduce)').matches||!mm('(hover:hover) and (pointer:fine)').matches)) return;
+  var baseRy=-18, baseRx=2.5, RANGE=9, SC=1.13;
+  hero.addEventListener('mousemove',function(e){
+    var r=book.getBoundingClientRect(), cx=r.left+r.width/2, cy=r.top+r.height/2;
+    var nx=Math.max(-1,Math.min(1,(e.clientX-cx)/(window.innerWidth/2)));
+    var ny=Math.max(-1,Math.min(1,(e.clientY-cy)/(window.innerHeight/2)));
+    book.style.transform='rotateY('+(baseRy+nx*RANGE).toFixed(2)+'deg) rotateX('+(baseRx-ny*RANGE).toFixed(2)+'deg) scale('+SC+')';
+  },{passive:true});
+  hero.addEventListener('mouseleave',function(){ book.style.transform=''; });
+})();
+</script>
+</body>
+</html>
