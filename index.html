@@ -183,11 +183,20 @@ a{color:inherit;text-decoration:none;}
 /* ---------- PROOF (blurbs) ---------- */
 .proof{flex:none;border-top:1px solid var(--line);}
 .proof .shell{padding:64px 44px 40px;}
-.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,3.4vw,52px);max-width:860px;margin:0 auto;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,3.4vw,52px);max-width:1040px;margin:0 auto;}
 .pq blockquote{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(17px,1.8vw,21px);line-height:1.4;color:var(--ink);text-wrap:pretty;}
 .pq figcaption{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-top:16px;}
 .pq figcaption a{color:inherit;border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
 .pq figcaption a:hover{color:var(--ink);border-color:var(--ink);}
+
+/* ---------- SKILL BAND ---------- */
+.skill{flex:none;border-top:1px solid var(--line);}
+.skill .shell{padding:58px 44px 62px;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,64px);align-items:center;}
+.skill-kicker{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);}
+.skill-copy{font-family:"Source Serif 4",serif;font-size:18px;line-height:1.55;color:#4A4A46;max-width:48ch;margin-top:18px;}
+.skill-copy b{color:var(--ink);font-weight:600;}
+.skill-cta{margin-top:26px;max-width:300px;}
+.skill-quote{border-left:1px solid var(--line);padding-left:28px;}
 
 /* ---------- COLOPHON ---------- */
 .colophon{flex:none;border-top:1px solid var(--line);}
@@ -207,6 +216,8 @@ a{color:inherit;text-decoration:none;}
   .actions{max-width:none;}
   .hero-desc{max-width:56ch;}
   .proof-grid{grid-template-columns:1fr;gap:34px;max-width:560px;}
+  .skill .shell{grid-template-columns:1fr;gap:34px;}
+  .skill-quote{border-left:0;padding-left:0;}
 }
 @media(max-width:560px){
   .shell{padding:0 22px;}
@@ -215,7 +226,7 @@ a{color:inherit;text-decoration:none;}
   .btn-row{grid-template-columns:1fr;}
   .praise-grid{grid-template-columns:1fr;}
   .move{grid-template-columns:44px 1fr;gap:16px;}
-  .masthead .shell,.diagram .shell,.pull .shell,.colophon .shell,.inside .shell,.praise .shell,.proof .shell{padding-left:22px;padding-right:22px;}
+  .masthead .shell,.diagram .shell,.pull .shell,.colophon .shell,.inside .shell,.praise .shell,.proof .shell,.skill .shell{padding-left:22px;padding-right:22px;}
   .proof .shell{padding-top:52px;padding-bottom:56px;}
   .proof-grid{grid-template-columns:1fr;gap:34px;}
   .colo-imprint{line-height:1.9;}
@@ -235,11 +246,8 @@ a{color:inherit;text-decoration:none;}
 
       <div class="actions">
         <a class="btn primary" href="/downloads/The-Ekram-Method.pdf" target="_blank" rel="noopener">
-          <span>Read / Download the PDF</span><span class="ar" aria-hidden="true">↗</span>
+          <span>Read the book</span><span class="ar" aria-hidden="true">↗</span>
         </a>
-        <div class="btn-row">
-          <a class="btn ghost" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Download the Skill for your agent</span><span class="ar" aria-hidden="true">↗</span></a>
-        </div>
         <p class="trust">PDF<span class="sep">·</span>~3&nbsp;MB<span class="sep">·</span>No signup<span class="sep">·</span><a href="https://twitter.com/intent/tweet?text=AI%20made%20building%20easy.%20It%20made%20standing%20out%20the%20hard%20part.%20The%20Ekram%20Method%20is%20a%20free%20field%20manual%20on%20positioning%20in%20the%20AI%20era.%20No%20signup%3A&url=https%3A%2F%2Fekrammethod.com" target="_blank" rel="noopener">Share on X ↗</a></p>      </div>
     </div>
 
@@ -268,21 +276,32 @@ a{color:inherit;text-decoration:none;}
     <div class="proof-grid">
       <figure class="pq">
         <blockquote>“I think it’s too good to be released.”</blockquote>
-        <figcaption><a href="https://x.com/justinhvogel" target="_blank" rel="noopener">Justin · Growth Advisor</a></figcaption>
-      </figure>
-      <figure class="pq">
-        <blockquote>“A lot of coding skills exist. Few help you structure a product idea and steer it in the right direction. This is one of them.”</blockquote>
-        <figcaption><a href="https://x.com/freddy_0x" target="_blank" rel="noopener">Freddy · AI Power User</a></figcaption>
-      </figure>
-      <figure class="pq">
-        <blockquote>“The skill and the book can make your brand and product GTM-ready.”</blockquote>
-        <figcaption><a href="https://x.com/naruto11eth" target="_blank" rel="noopener">Naruto · Polymarket</a></figcaption>
+        <figcaption><a href="https://x.com/justinhvogel" target="_blank" rel="noopener">Justin · Growth Advisor, after early access</a></figcaption>
       </figure>
       <figure class="pq">
         <blockquote>“A good boundary and guide to take a startup idea and apply each principle through the lifecycle of a business.”</blockquote>
         <figcaption><a href="https://x.com/adamdelphantom" target="_blank" rel="noopener">Adam Phantom</a></figcaption>
       </figure>
+      <figure class="pq">
+        <blockquote>“The skill and the book can make your brand and product GTM-ready.”</blockquote>
+        <figcaption><a href="https://x.com/naruto11eth" target="_blank" rel="noopener">Naruto · Polymarket</a></figcaption>
+      </figure>
     </div>
+  </div>
+</section>
+
+<!-- ===== SKILL BAND ===== -->
+<section class="skill">
+  <div class="shell">
+    <div class="skill-text">
+      <div class="skill-kicker">For your agent</div>
+      <p class="skill-copy">The method as an installable skill for Claude, Cursor, and other agents. It applies the five moves to your product and writes the copy to match.</p>
+      <a class="btn ghost skill-cta" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Install the skill</span><span class="ar" aria-hidden="true">↗</span></a>
+    </div>
+    <figure class="pq skill-quote">
+      <blockquote>“A lot of coding skills exist. Few help you structure a product idea and steer it in the right direction. This is one of them.”</blockquote>
+      <figcaption><a href="https://x.com/freddy_0x" target="_blank" rel="noopener">Freddy · AI Power User</a></figcaption>
+    </figure>
   </div>
 </section>
 
