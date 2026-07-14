@@ -183,10 +183,9 @@ a{color:inherit;text-decoration:none;}
 /* ---------- PROOF (blurbs) ---------- */
 .proof{flex:none;border-top:1px solid var(--line);}
 .proof .shell{padding:64px 44px 68px;}
-.proof-grid{display:flex;flex-direction:column;align-items:center;gap:clamp(26px,3vw,40px);max-width:none;margin:0 auto;}
-.pq{text-align:center;}
-.pq blockquote{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(15px,1.6vw,18px);line-height:1.4;color:var(--ink);white-space:nowrap;}
-.pq figcaption{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-top:12px;}
+.proof-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,3.4vw,52px);max-width:860px;margin:0 auto;}
+.pq blockquote{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(17px,1.8vw,21px);line-height:1.4;color:var(--ink);text-wrap:pretty;}
+.pq figcaption{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-top:16px;}
 .pq figcaption a{color:inherit;border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
 .pq figcaption a:hover{color:var(--ink);border-color:var(--ink);}
 
@@ -207,8 +206,7 @@ a{color:inherit;text-decoration:none;}
   .book-stage{order:2;}
   .actions{max-width:none;}
   .hero-desc{max-width:56ch;}
-  .proof-grid{gap:30px;max-width:560px;}
-  .pq blockquote{white-space:normal;text-wrap:pretty;}
+  .proof-grid{grid-template-columns:1fr;gap:34px;max-width:560px;}
 }
 @media(max-width:560px){
   .shell{padding:0 22px;}
