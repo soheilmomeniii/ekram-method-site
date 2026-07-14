@@ -189,30 +189,14 @@ a{color:inherit;text-decoration:none;}
 .pq figcaption a{color:inherit;border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
 .pq figcaption a:hover{color:var(--ink);border-color:var(--ink);}
 
-/* ---------- SKILL (agent pitch + live output + feedback) ---------- */
+/* ---------- SKILL BAND ---------- */
 .skill{flex:none;border-top:1px solid var(--line);}
-.skill .shell{padding:60px 44px 62px;}
-.skill-band{display:grid;grid-template-columns:1fr 1.12fr;gap:clamp(40px,5vw,60px);align-items:center;}
+.skill .shell{padding:58px 44px 62px;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,5vw,64px);align-items:center;}
 .skill-kicker{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);}
-.skill-copy{font-family:"Source Serif 4",serif;font-size:18px;line-height:1.55;color:#4A4A46;max-width:42ch;margin-top:18px;}
+.skill-copy{font-family:"Source Serif 4",serif;font-size:18px;line-height:1.55;color:#4A4A46;max-width:48ch;margin-top:18px;}
 .skill-copy b{color:var(--ink);font-weight:600;}
 .skill-cta{margin-top:26px;max-width:300px;}
-/* live output transcript */
-.sd-chat{border:1px solid var(--line);background:var(--paper);box-shadow:0 1px 0 rgba(20,21,15,.02);}
-.sd-you{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--slate);padding:16px 24px;border-bottom:1px solid var(--line);background:#FCFCFC;}
-.sd-you b{color:var(--ink);font-weight:700;}
-.sd-out{padding:14px 24px 18px;}
-.sd-move{display:grid;grid-template-columns:128px 1fr;gap:16px;padding:8px 0;}
-.sd-move + .sd-move{border-top:1px solid #F1F1F0;}
-.sd-move .k{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);line-height:1.6;}
-.sd-move .v{font-family:"Source Serif 4",serif;font-size:16px;color:var(--ink);line-height:1.4;}
-.sd-cap{font-family:"Jost",sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-top:12px;text-align:right;}
-/* feedback on the skill */
-.skill-feedback{margin-top:52px;padding-top:44px;border-top:1px solid var(--line);text-align:center;}
-.skill-fb-label{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mid);margin-bottom:26px;}
-.skill-fb-grid{display:grid;grid-template-columns:1fr;gap:clamp(26px,3.2vw,44px);max-width:620px;margin:0 auto;}
-.skill-fb-grid.two{grid-template-columns:repeat(2,1fr);max-width:880px;}
-.skill-fb-grid.three{grid-template-columns:repeat(3,1fr);max-width:1040px;}
+.skill-quote{border-left:1px solid var(--line);padding-left:28px;}
 
 /* ---------- COLOPHON ---------- */
 .colophon{flex:none;border-top:1px solid var(--line);}
@@ -232,8 +216,8 @@ a{color:inherit;text-decoration:none;}
   .actions{max-width:none;}
   .hero-desc{max-width:56ch;}
   .proof-grid{grid-template-columns:1fr;gap:34px;max-width:560px;}
-  .skill-band{grid-template-columns:1fr;gap:32px;}
-  .skill-fb-grid.two,.skill-fb-grid.three{grid-template-columns:1fr;max-width:560px;}
+  .skill .shell{grid-template-columns:1fr;gap:34px;}
+  .skill-quote{border-left:0;padding-left:0;}
 }
 @media(max-width:560px){
   .shell{padding:0 22px;}
@@ -245,8 +229,6 @@ a{color:inherit;text-decoration:none;}
   .masthead .shell,.diagram .shell,.pull .shell,.colophon .shell,.inside .shell,.praise .shell,.proof .shell,.skill .shell{padding-left:22px;padding-right:22px;}
   .proof .shell{padding-top:52px;padding-bottom:56px;}
   .proof-grid{grid-template-columns:1fr;gap:34px;}
-  .sd-move{grid-template-columns:96px 1fr;gap:12px;}
-  .sd-you{white-space:normal;}
   .colo-imprint{line-height:1.9;}
 }
 </style>
@@ -308,39 +290,18 @@ a{color:inherit;text-decoration:none;}
   </div>
 </section>
 
-<!-- ===== SKILL (agent pitch + live output + feedback) ===== -->
+<!-- ===== SKILL BAND ===== -->
 <section class="skill">
   <div class="shell">
-    <div class="skill-band">
-      <div class="skill-text">
-        <div class="skill-kicker">For your agent</div>
-        <p class="skill-copy">The method as an installable skill for Claude, Cursor, and other agents. Hand it your product and it runs the five moves, then writes the copy to match.</p>
-        <a class="btn ghost skill-cta" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Install the skill</span><span class="ar" aria-hidden="true">↗</span></a>
-      </div>
-      <div class="skill-demo">
-        <div class="sd-chat">
-          <div class="sd-you"><b>You:</b> Position my product: a fitness app.</div>
-          <div class="sd-out">
-            <div class="sd-move"><div class="k">Meaning</div><div class="v">The workout app that never hands you a session you'll skip.</div></div>
-            <div class="sd-move"><div class="k">Category</div><div class="v">A coach in your pocket, not an exercise library.</div></div>
-            <div class="sd-move"><div class="k">Belief</div><div class="v">Motivation fades. The right next rep doesn't.</div></div>
-            <div class="sd-move"><div class="k">Inevitability</div><div class="v">Adapts to every session, syncs to your watch.</div></div>
-            <div class="sd-move"><div class="k">Delivery</div><div class="v">“Show up. We'll pick the workout.”</div></div>
-          </div>
-        </div>
-        <div class="sd-cap">Sample output · one prompt, five moves</div>
-      </div>
+    <div class="skill-text">
+      <div class="skill-kicker">For your agent</div>
+      <p class="skill-copy">The method as an installable skill for Claude, Cursor, and other agents. It applies the five moves to your product and writes the copy to match.</p>
+      <a class="btn ghost skill-cta" href="https://www.skills.sh/soheilmomeniii/positioning-products/positioning-products" target="_blank" rel="noopener"><span>Install the skill</span><span class="ar" aria-hidden="true">↗</span></a>
     </div>
-
-    <div class="skill-feedback">
-      <div class="skill-fb-label">What builders say about the skill</div>
-      <div class="skill-fb-grid">
-        <figure class="pq">
-          <blockquote>“A lot of coding skills exist. Few help you structure a product idea and steer it in the right direction. This is one of them.”</blockquote>
-          <figcaption><a href="https://x.com/freddy_0x" target="_blank" rel="noopener">Freddy · AI Power User</a></figcaption>
-        </figure>
-      </div>
-    </div>
+    <figure class="pq skill-quote">
+      <blockquote>“A lot of coding skills exist. Few help you structure a product idea and steer it in the right direction. This is one of them.”</blockquote>
+      <figcaption><a href="https://x.com/freddy_0x" target="_blank" rel="noopener">Freddy · AI Power User</a></figcaption>
+    </figure>
   </div>
 </section>
 
