@@ -183,7 +183,7 @@ a{color:inherit;text-decoration:none;}
 /* ---------- PROOF (blurbs) ---------- */
 .proof{flex:none;border-top:1px solid var(--line);}
 .proof .shell{padding:64px 44px 68px;}
-.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,64px);max-width:940px;margin:0 auto;}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,3.4vw,52px);max-width:1040px;margin:0 auto;}
 .pq blockquote{font-family:"Source Serif 4",serif;font-style:italic;font-weight:400;font-size:clamp(17px,1.8vw,21px);line-height:1.4;color:var(--ink);text-wrap:pretty;}
 .pq figcaption{font-family:"Jost",sans-serif;font-weight:500;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);margin-top:16px;}
 .pq figcaption a{color:inherit;border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
@@ -206,6 +206,7 @@ a{color:inherit;text-decoration:none;}
   .book-stage{order:2;}
   .actions{max-width:none;}
   .hero-desc{max-width:56ch;}
+  .proof-grid{grid-template-columns:1fr;gap:34px;max-width:560px;}
 }
 @media(max-width:560px){
   .shell{padding:0 22px;}
@@ -272,6 +273,10 @@ a{color:inherit;text-decoration:none;}
       <figure class="pq">
         <blockquote>“A lot of coding skills exist. Few help you structure a product idea and steer it in the right direction. This is one of them.”</blockquote>
         <figcaption><a href="https://x.com/freddy_0x" target="_blank" rel="noopener">Freddy · AI Power User</a></figcaption>
+      </figure>
+      <figure class="pq">
+        <blockquote>“The skill and the book can make your brand and product GTM-ready.”</blockquote>
+        <figcaption><a href="https://x.com/naruto11eth" target="_blank" rel="noopener">Naruto · Polymarket</a></figcaption>
       </figure>
     </div>
   </div>
