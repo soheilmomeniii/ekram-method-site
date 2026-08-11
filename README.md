@@ -11,7 +11,7 @@ The book is the collected thinking of [@ekrahm](https://x.com/ekrahm), compiled 
 A single, self-contained static site — no build step, no framework.
 
 - `index.html` — the entire page (inline CSS, hero, 3D book-cover object, colophon)
-- `downloads/` — the free book PDF (`The-Ekram-Method.pdf`, ~0.8 MB, no signup)
+- `assets/cover.png` — the book cover shown in the hero
 - `assets/` — Open Graph / Twitter share card
 - `fonts/` — self-hosted web fonts (Jost, Source Serif 4, Anton, IBM Plex Mono)
 - favicons + `apple-touch-icon.png`
