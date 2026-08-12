@@ -124,9 +124,26 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 .btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink);}
 .btn.primary .ar{color:rgba(255,255,255,.6);}
 .btn.primary:hover{background:var(--slate);border-color:var(--slate);}
-.btn.soon{background:#F1ECE2;border:1px solid var(--line);color:var(--mid);cursor:default;}
-.btn.soon .soon-tag{font-family:"Satoshi",system-ui,sans-serif;font-size:11px;letter-spacing:.12em;color:var(--mid);border:1px solid var(--line);border-radius:2px;padding:3px 7px;}
-.follow{margin-top:10px;}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+.signup{display:grid;grid-template-columns:1fr auto;gap:10px;}
+.signup-input{font-family:"Satoshi",system-ui,sans-serif;font-size:15px;color:var(--ink);background:#FCFAF6;
+  border:1px solid #C9BFAE;padding:15px 16px;min-width:0;transition:border-color .16s ease;}
+.signup-input::placeholder{color:#A79E90;}
+.signup-input:hover{border-color:#B3A897;}
+.signup-input:focus{outline:none;border-color:var(--ink);}
+.signup-input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.signup-btn{border:1px solid var(--ink);cursor:pointer;}
+.signup-trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;}
+.signup-note{font-family:"Satoshi",system-ui,sans-serif;font-size:12.5px;letter-spacing:.06em;color:var(--mid);margin-top:14px;}
+.signup-note:empty{display:none;}
+.signup-note.err{color:var(--accent);}
+.signup-note.ok{color:var(--ink);}
+.signup.done{display:none;}
+.btn.ghost{background:transparent;color:var(--ink);border-color:#C9BFAE;}
+.btn.ghost:hover{background:#EFEAE0;border-color:var(--ink);}
+@media(max-width:560px){.signup{grid-template-columns:1fr;}}
+
+.follow{margin-top:14px;}
 
 /* ---------- BOOK (the one object of colour) ---------- */
 .book-stage{position:relative;display:flex;justify-content:center;align-items:center;min-width:0;padding:26px 10px 34px;perspective:2600px;perspective-origin:50% 40%;animation:bookIn .85s cubic-bezier(.2,.7,.2,1) both, floaty 6.5s ease-in-out .95s infinite;}
@@ -310,10 +327,17 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
       <p class="hero-desc">When execution is free, <b>positioning is the ultimate edge</b>. This is the field manual to win in the age of AI.</p>
 
       <div class="actions">
-        <span class="btn soon" aria-disabled="true">
-          <span>Read the book</span><span class="soon-tag">Soon</span>
-        </span>
-        <a class="btn primary follow" href="https://x.com/somonaut" target="_blank" rel="noopener">
+        <form class="signup" id="signup" novalidate>
+          <label class="sr-only" for="email">Your email</label>
+          <input class="signup-input" id="email" name="email" type="email" inputmode="email"
+                 autocomplete="email" placeholder="Your email" required>
+          <input class="signup-trap" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn primary signup-btn" type="submit">
+            <span>Get it first</span><span class="ar" aria-hidden="true">→</span>
+          </button>
+        </form>
+        <p class="signup-note" id="signup-note" role="status" aria-live="polite"></p>
+        <a class="btn ghost follow" href="https://x.com/somonaut" target="_blank" rel="noopener">
           <span>Follow for the launch</span><span class="ar" aria-hidden="true">↗</span>
         </a>      </div>
     </div>
@@ -425,7 +449,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 <section class="sources">
   <div class="shell">
     <div class="src-head">
-      <div class="src-kicker">Source</div>
+      <div class="src-kicker">Sources</div>
       <h2 class="src-title">Built from the record</h2>
     </div>
     <div class="src-grid">
@@ -529,6 +553,35 @@ document.addEventListener('DOMContentLoaded',function(){
     es.forEach(function(e){ if(e.isIntersecting){ el.classList.add('in'); io.disconnect(); } });
   },{threshold:.22});
   io.observe(el);
+})();
+</script>
+<script>
+/* Email capture -> /api/subscribe (same origin, so the CSP stays 'self') */
+(function(){
+  var form=document.getElementById('signup'); if(!form) return;
+  var note=document.getElementById('signup-note'), btn=form.querySelector('button'), input=form.querySelector('#email');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var email=(input.value||'').trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+      note.className='signup-note err'; note.textContent='That email doesn\u2019t look right.'; input.focus(); return;
+    }
+    btn.disabled=true; note.className='signup-note'; note.textContent='Sending\u2026';
+    fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,company:form.company.value})})
+      .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+      .then(function(res){
+        if(res.ok){
+          form.classList.add('done');
+          note.className='signup-note ok'; note.textContent='You\u2019re on the list.';
+          try{window.va('event',{name:'subscribe'});}catch(e){}
+        } else {
+          btn.disabled=false;
+          note.className='signup-note err'; note.textContent=(res.d&&res.d.error)||'Couldn\u2019t save that. Try again?';
+        }
+      })
+      .catch(function(){ btn.disabled=false; note.className='signup-note err'; note.textContent='Network hiccup. Try again?'; });
+  });
 })();
 </script>
 </body>
