@@ -8,7 +8,7 @@
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 async function toButtonown(email) {
-  const r = await fetch("https://api.buttondown.email/v1/subscribers", {
+  const r = await fetch("https://api.buttondown.com/v1/subscribers", {
     method: "POST",
     headers: {
       Authorization: `Token ${process.env.BUTTONDOWN_API_KEY}`,
