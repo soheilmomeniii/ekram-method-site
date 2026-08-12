@@ -89,8 +89,8 @@ a{color:inherit;text-decoration:none;}
 .mh-line{display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:0;text-align:center;font-family:"Satoshi",system-ui,sans-serif;
   font-weight:500;font-size:13px;letter-spacing:.2em;text-transform:uppercase;line-height:1.5;}
 .mh-sub{color:var(--mid);font-weight:400;}
-.mh-line a{color:inherit;border-bottom:1px solid transparent;transition:color .16s ease,border-color .16s ease;}
-.mh-sub:hover{color:var(--ink);border-color:var(--line);}
+.mh-sub a{color:var(--ink);border-bottom:1px solid var(--line);padding-bottom:2px;transition:border-color .16s ease;}
+.mh-sub a:hover{border-color:var(--ink);}
 .mh-line{margin-right:-.2em;}
 
 /* ---------- HERO ---------- */
@@ -314,7 +314,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 <header class="masthead">
   <div class="shell">
     <div class="mh-line">
-      <a class="mh-sub" href="/">The collected thinking of Ekram, compiled by Somo</a>
+      <span class="mh-sub">The collected thinking of <a href="https://x.com/ekrahm" target="_blank" rel="noopener">Ekram</a>, compiled by <a href="https://x.com/somonaut" target="_blank" rel="noopener">Somo</a></span>
     </div>
   </div>
 </header>
@@ -331,12 +331,12 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 
       <div class="actions">
         <form class="signup" id="signup" novalidate>
-          <label class="sr-only" for="email">Your email</label>
-          <input class="signup-input" id="email" name="email" type="email" inputmode="email"
-                 autocomplete="email" placeholder="Your email" required>
+          <label class="sr-only" for="email">Your Telegram or X handle</label>
+          <input class="signup-input" id="email" name="email" type="text" inputmode="text"
+                 autocomplete="username" placeholder="@TelegramOrXhandle" required>
           <input class="signup-trap" type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn primary signup-btn" type="submit">
-            <span>Get it first</span><span class="ar" aria-hidden="true">→</span>
+            <span>Get the first version</span><span class="ar" aria-hidden="true">→</span>
           </button>
         </form>
         <p class="signup-note" id="signup-note" role="status" aria-live="polite"></p>
@@ -566,8 +566,8 @@ document.addEventListener('DOMContentLoaded',function(){
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var email=(input.value||'').trim();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
-      note.className='signup-note err'; note.textContent='That email doesn\u2019t look right.'; input.focus(); return;
+    if(!/^@?[A-Za-z0-9_]{2,32}$/.test(email)){
+      note.className='signup-note err'; note.textContent='A Telegram or X handle, like @somonaut.'; input.focus(); return;
     }
     btn.disabled=true; note.className='signup-note'; note.textContent='Sending\u2026';
     fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},
@@ -576,7 +576,7 @@ document.addEventListener('DOMContentLoaded',function(){
       .then(function(res){
         if(res.ok){
           form.classList.add('done');
-          note.className='signup-note ok'; note.innerHTML='You\u2019re on the list.<span class="sn-sub">One email when the book ships. Nothing else.</span>';
+          note.className='signup-note ok'; note.innerHTML='You\u2019re on the list.<span class="sn-sub">You\u2019ll get the first version, and I\u2019ll want to know what\u2019s wrong with it.</span>';
           try{window.va('event',{name:'subscribe'});}catch(e){}
         } else {
           btn.disabled=false;
