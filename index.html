@@ -130,10 +130,6 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 .btn.soon{background:#F1ECE2;border:1px solid var(--line);color:var(--mid);cursor:default;}
 .btn.soon .soon-tag{font-family:"Satoshi",system-ui,sans-serif;font-size:11px;letter-spacing:.12em;color:var(--mid);border:1px solid var(--line);border-radius:2px;padding:3px 7px;}
 .follow{margin-top:10px;}
-.trust{font-family:"Satoshi",system-ui,sans-serif;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-top:20px;}
-.trust .sep{color:var(--line);margin:0 8px;}
-.trust a{border-bottom:1px solid transparent;transition:color .16s,border-color .16s;}
-.trust a:hover{color:var(--ink);border-color:var(--ink);}
 
 /* ---------- BOOK (the one object of colour) ---------- */
 .book-stage{position:relative;display:flex;justify-content:center;align-items:center;min-width:0;padding:26px 10px 34px;perspective:2600px;perspective-origin:50% 40%;animation:bookIn .85s cubic-bezier(.2,.7,.2,1) both, floaty 6.5s ease-in-out .95s infinite;}
@@ -312,7 +308,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 <section class="hero">
   <div class="shell">
     <div class="hero-text">
-      <div class="eyebrow-row"><span class="eyebrow">First Edition · Free · For founders</span></div>
+      <div class="eyebrow-row"><span class="eyebrow">First Edition · For founders</span></div>
       <h1 class="hero-title">The Ekram<br>Method</h1>
       <p class="hero-sub"><a href="#inversion">The Great Inversion<span class="hs-ar" aria-hidden="true"> ↓</span></a></p>
       <p class="hero-desc">When execution is free, <b>positioning is the only ultimate edge</b>. This is the field manual to win in the age of AI.</p>
@@ -323,8 +319,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
         </span>
         <a class="btn primary follow" href="https://x.com/somonaut" target="_blank" rel="noopener">
           <span>Follow for the launch</span><span class="ar" aria-hidden="true">↗</span>
-        </a>
-        <p class="trust"><a href="https://twitter.com/intent/tweet?text=AI%20made%20building%20cheap.%20Belief%20is%20still%20expensive.%20The%20Ekram%20Method%20is%20a%20field%20manual%20for%20positioning%20in%20the%20AI%20era%3A&url=https%3A%2F%2Fekrammethod.com%2F%3Fv%3D3" target="_blank" rel="noopener">Share on X ↗</a></p>      </div>
+        </a>      </div>
     </div>
 
     <div class="book-stage">
@@ -374,6 +369,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
         <line x1="56" y1="56" x2="56" y2="442" stroke="var(--line)" stroke-width="1.5"></line>
         <line x1="56" y1="442" x2="1150" y2="442" stroke="var(--line)" stroke-width="1.5"></line>
         <text class="t-axis" transform="translate(38,240) rotate(-90)" text-anchor="middle">POWER</text>
+        <text class="t-axis" x="1150" y="468" text-anchor="end">TIME</text>
 
         <g stroke-linecap="round" fill="none">
           <!-- before: both run heavy and level -->
@@ -433,17 +429,17 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 <section class="sources">
   <div class="shell">
     <div class="src-head">
-      <div class="src-kicker">Where it comes from</div>
+      <div class="src-kicker">Source</div>
       <h2 class="src-title">Built from the record</h2>
     </div>
     <div class="src-grid">
       <div class="src-col">
-        <h3>The essays</h3>
+        <h3>Essays</h3>
         <p>Where Ekram works an argument out at length. The essays are the backbone of the method and the first source the book leans on.</p>
         <a class="src-link" href="https://ekram.xyz" target="_blank" rel="noopener">ekram.xyz <span aria-hidden="true">↗</span></a>
       </div>
       <div class="src-col">
-        <h3>The posts</h3>
+        <h3>Posts</h3>
         <p>Every post since 2017, compressed. The sharpest lines in the book are his, word for word, each one carrying a link and a year.</p>
         <a class="src-link" href="https://x.com/ekrahm" target="_blank" rel="noopener">@ekrahm <span aria-hidden="true">↗</span></a>
       </div>
@@ -501,7 +497,7 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-  var map=[['a[href*="x.com/somonaut"]','follow_x'],['a[href*="intent/tweet"]','share_x']];
+  var map=[['a[href*="x.com/somonaut"]','follow_x']];
   map.forEach(function(m){document.querySelectorAll(m[0]).forEach(function(el){
     el.addEventListener('click',function(){try{window.va('event',{name:m[1]});}catch(e){}});
   });});
