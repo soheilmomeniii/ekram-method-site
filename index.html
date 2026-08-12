@@ -137,7 +137,10 @@ main{flex:1 0 auto;display:flex;flex-direction:column;}
 .signup-note{font-family:"Satoshi",system-ui,sans-serif;font-size:12.5px;letter-spacing:.06em;color:var(--mid);margin-top:14px;}
 .signup-note:empty{display:none;}
 .signup-note.err{color:var(--accent);}
-.signup-note.ok{color:var(--ink);}
+.signup-note.ok{font-family:"Sentient",Georgia,serif;font-style:italic;font-weight:500;
+  font-size:clamp(20px,2.4vw,26px);line-height:1.25;letter-spacing:-.01em;color:var(--ink);margin-top:4px;}
+.signup-note.ok .sn-sub{display:block;font-family:"Satoshi",system-ui,sans-serif;font-style:normal;font-weight:400;
+  font-size:12.5px;letter-spacing:.06em;color:var(--mid);margin-top:10px;}
 .signup.done{display:none;}
 .btn.ghost{background:transparent;color:var(--ink);border-color:#C9BFAE;}
 .btn.ghost:hover{background:#EFEAE0;border-color:var(--ink);}
@@ -573,7 +576,7 @@ document.addEventListener('DOMContentLoaded',function(){
       .then(function(res){
         if(res.ok){
           form.classList.add('done');
-          note.className='signup-note ok'; note.textContent='You\u2019re on the list.';
+          note.className='signup-note ok'; note.innerHTML='You\u2019re on the list.<span class="sn-sub">One email when the book ships. Nothing else.</span>';
           try{window.va('event',{name:'subscribe'});}catch(e){}
         } else {
           btn.disabled=false;
