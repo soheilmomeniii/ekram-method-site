@@ -39,22 +39,25 @@
   "image": "https://ekrammethod.com/assets/og-6.png",
   "abstract": "A first-principles positioning method for founders in the AI era. When execution is free, positioning is the only edge.",
   "inLanguage": "en",
-  "author": { "@type": "Person", "name": "Ekram", "url": "https://x.com/ekrahm" },
-  "contributor": { "@type": "Person", "name": "Soheil Momeni", "alternateName": "Somo", "url": "https://x.com/somonaut" },
+  "author": { "@type": "Person", "name": "Soheil Momeni", "alternateName": "Somo", "url": "https://x.com/somonaut" },
+  "about": { "@type": "Person", "name": "Ekram", "url": "https://x.com/ekrahm" },
   "publisher": { "@type": "Organization", "name": "The Ekram Method", "url": "https://ekrammethod.com/" },
   "bookFormat": "https://schema.org/EBook",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "availability": "https://schema.org/PreOrder", "url": "https://ekrammethod.com/" }
 }
 </script>
 
-<link rel="preload" href="/fonts/satoshi-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/satoshi-500i.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/sentient-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/sentient-400i.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
 @font-face{font-family:'Satoshi';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/satoshi-400.woff2') format('woff2');}
 @font-face{font-family:'Satoshi';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/satoshi-500.woff2') format('woff2');}
 @font-face{font-family:'Satoshi';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/satoshi-700.woff2') format('woff2');}
+@font-face{font-family:'Satoshi';font-style:italic;font-weight:500;font-display:swap;src:url('/fonts/satoshi-500i.woff2') format('woff2');}
+@font-face{font-family:'Satoshi';font-style:italic;font-weight:700;font-display:swap;src:url('/fonts/satoshi-700i.woff2') format('woff2');}
 @font-face{font-family:'Sentient';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/sentient-400.woff2') format('woff2');}
 @font-face{font-family:'Sentient';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/sentient-400i.woff2') format('woff2');}
 @font-face{font-family:'Sentient';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/sentient-500.woff2') format('woff2');}
@@ -105,8 +108,8 @@ a.mh-name:hover{border-color:var(--line);}
 .hero-sub a{color:inherit;}
 .hero-sub .hs-ar{font-family:"Satoshi",system-ui,sans-serif;font-style:normal;font-size:.62em;opacity:0;transform:translateY(2px);display:inline-block;transition:opacity .18s ease,transform .18s ease;}
 .hero-sub a:hover .hs-ar{opacity:.9;transform:translateY(4px);}
-.hero-desc{font-family:"Satoshi",system-ui,sans-serif;font-size:17.5px;line-height:1.55;color:#554F46;max-width:44ch;margin-top:22px;}
-.hero-desc b{color:var(--ink);font-weight:600;}
+.hero-desc{font-family:"Satoshi",system-ui,sans-serif;font-style:italic;font-weight:500;font-size:18px;line-height:1.5;color:var(--ink);max-width:44ch;margin-top:22px;text-wrap:pretty;}
+.hero-desc b{font-weight:700;color:var(--ink);}
 
 /* ---------- ACTIONS ---------- */
 .actions{margin-top:34px;max-width:452px;}
@@ -150,35 +153,49 @@ a.mh-name:hover{border-color:var(--line);}
 .inversion{flex:none;background:var(--paper);}
 .inversion .shell{padding:var(--band) 44px var(--band);}
 .inv-head{max-width:800px;margin:0 auto;text-align:center;}
-.inv-kicker{font-family:"Satoshi",system-ui,sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--mid);}
-.inv-title{font-family:"Sentient",Georgia,serif;text-wrap:balance;font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.018em;margin-top:14px;}
-.inv-copy{font-family:"Satoshi",system-ui,sans-serif;font-size:17.5px;line-height:1.55;color:#554F46;max-width:52ch;margin:18px auto 0;text-wrap:pretty;}
-.inv-copy b{color:var(--ink);font-weight:700;}
+.inv-title{font-family:"Sentient",Georgia,serif;text-wrap:balance;font-weight:500;font-size:clamp(34px,4.6vw,58px);line-height:1.02;letter-spacing:-.018em;}
 .inv-fig{margin-top:clamp(30px,3.4vw,46px);}
 .inv-fig svg{display:block;width:100%;height:auto;overflow:visible;}
 
+/* chart type, as classes so it can scale on small screens */
+.inv-fig text{font-family:"Satoshi",system-ui,sans-serif;}
+.t-axis{font-size:13px;font-weight:500;letter-spacing:.28em;fill:#8C8478;}
+.t-mark{font-size:15px;font-weight:700;letter-spacing:.14em;fill:#171717;}
+.t-sub{font-size:13px;font-weight:500;letter-spacing:.14em;fill:#6A6258;}
+.t-mark2{font-size:15px;font-weight:700;letter-spacing:.14em;fill:#cc1123;}
+.t-curve{font-size:24px;font-weight:700;letter-spacing:.16em;}
+.t-prod{fill:#6A6258;} .t-pos{fill:#171717;}
+.t-inv{font-size:18px;font-weight:700;letter-spacing:.14em;fill:#cc1123;}
+.t-here{font-size:18px;font-weight:700;letter-spacing:.14em;fill:#171717;}
+@media(max-width:900px){
+  .t-axis{font-size:19px;letter-spacing:.2em;} .t-mark,.t-mark2{font-size:23px;} .t-sub{font-size:20px;}
+  .t-curve{font-size:32px;} .t-inv{font-size:26px;} .t-here{font-size:26px;}
+}
+@media(max-width:560px){
+  .t-axis{font-size:26px;} .t-mark,.t-mark2{font-size:31px;letter-spacing:.1em;} .t-sub{font-size:27px;letter-spacing:.1em;}
+  .t-curve{font-size:42px;} .t-inv{font-size:34px;} .t-here{font-size:34px;}
+}
+
 /* motion: the two lines run level, cross, then become what they are */
-.inv-pre{stroke-dashoffset:var(--len,1400);stroke-dasharray:var(--len,1400);
-  transition:stroke-dashoffset 2.1s cubic-bezier(.74,.01,.86,.3);}
-.inversion.in .inv-pre{stroke-dashoffset:0;}
+.inv-pre{stroke-dashoffset:var(--len,1400);stroke-dasharray:var(--len,1400);}
+.inversion.in .inv-pre{stroke-dashoffset:0;transition:stroke-dashoffset 2.1s cubic-bezier(.74,.01,.86,.3);}
 .inv-heavy{opacity:1;}
-.inversion.in .inv-heavy{opacity:0;transition:stroke-dashoffset 2.1s cubic-bezier(.74,.01,.86,.3),opacity .5s ease 2.2s;}
+.inversion.in .inv-heavy{opacity:0;transition:stroke-dashoffset 2.1s cubic-bezier(.74,.01,.86,.3),opacity .5s ease 2.6s;}
 .inv-truth{opacity:0;transition:opacity .55s ease;}
-.inversion.in .inv-truth{opacity:1;transition-delay:2.2s;}
-.inv-post{stroke-dashoffset:var(--len,1400);stroke-dasharray:var(--len,1400);
-  transition:stroke-dashoffset 2.4s cubic-bezier(.5,0,.35,1);}
-.inversion.in .inv-post{stroke-dashoffset:0;transition-delay:2.3s;}
+.inversion.in .inv-truth{opacity:1;transition-delay:2.6s;}
+.inv-post{stroke-dashoffset:var(--len,1400);stroke-dasharray:var(--len,1400);}
+.inversion.in .inv-post{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s cubic-bezier(.5,0,.35,1) 2.7s;}
 .inv-after-dash{opacity:0;transition:opacity .8s ease;}
-.inversion.in .inv-after-dash{opacity:1;transition-delay:2.9s;}
+.inversion.in .inv-after-dash{opacity:1;transition-delay:3.3s;}
 
 /* the crossing: dot lands, shockwave leaves */
 .inv-pop{opacity:0;transform:scale(.3);transform-origin:830px 252px;
   transition:opacity .35s ease,transform .55s cubic-bezier(.2,1.7,.35,1);}
-.inversion.in .inv-pop{opacity:1;transform:scale(1);transition-delay:2.02s;}
+.inversion.in .inv-pop{opacity:1;transform:scale(1);transition-delay:2.42s;}
 .boom{opacity:0;transform-origin:830px 252px;}
 .inversion.in .boom{animation:boom 1s cubic-bezier(.15,.6,.25,1) both;}
-.inversion.in .b1{animation-delay:2.06s;}
-.inversion.in .b2{animation-delay:2.22s;}
+.inversion.in .b1{animation-delay:2.46s;}
+.inversion.in .b2{animation-delay:2.62s;}
 @keyframes boom{
   0%{opacity:.85;transform:scale(.55);}
   70%{opacity:.14;}
@@ -188,13 +205,12 @@ a.mh-name:hover{border-color:var(--line);}
 .inv-fade{opacity:0;transform:translateY(8px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1);}
 .inversion.in .inv-fade{opacity:1;transform:translateY(0);}
 .inversion.in .d1{transition-delay:1.35s;} .inversion.in .d2{transition-delay:.5s;}
-.inversion.in .d4{transition-delay:3.0s;} .inversion.in .d5{transition-delay:4.3s;}
-.inv-head .inv-kicker,.inv-head .inv-title,.inv-head .inv-copy{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
-.inversion.in .inv-kicker{opacity:1;transform:none;}
+.inversion.in .dmark{transition-delay:2.05s;}
+.inversion.in .d4{transition-delay:3.4s;} .inversion.in .d5{transition-delay:4.7s;}
+.inv-head .inv-title{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);}
 .inversion.in .inv-title{opacity:1;transform:none;transition-delay:.08s;}
-.inversion.in .inv-copy{opacity:1;transform:none;transition-delay:.16s;}
 @media (prefers-reduced-motion:reduce){
-  .inv-pre,.inv-post,.inv-truth,.inv-after-dash,.inv-fade,.inv-pop,.inv-head .inv-kicker,.inv-head .inv-title,.inv-head .inv-copy{transition:none;animation:none;opacity:1;transform:none;stroke-dashoffset:0;}
+  .inv-pre,.inv-post,.inv-truth,.inv-after-dash,.inv-fade,.inv-pop,.inv-head .inv-title{transition:none;animation:none;opacity:1;transform:none;stroke-dashoffset:0;}
   .inv-heavy,.boom{display:none;}
 }
 
@@ -344,16 +360,14 @@ a.mh-name:hover{border-color:var(--line);}
 <section class="inversion" id="inversion">
   <div class="shell">
     <div class="inv-head">
-      <div class="inv-kicker">The thesis · The power moved from product to positioning</div>
       <h2 class="inv-title">The Great Inversion</h2>
-      <p class="inv-copy">AI made building cheap. <b>Belief is still expensive.</b> The power that used to sit in the product moved to the story the market tells about it.</p>
     </div>
 
     <div class="inv-fig">
       <svg viewBox="0 0 1160 600" role="img" aria-label="A chart of power over time. Product power and positioning power run level, then cross at the inversion: product falls away while positioning climbs.">
         <line x1="56" y1="56" x2="56" y2="442" stroke="var(--line)" stroke-width="1.5"></line>
         <line x1="56" y1="442" x2="1150" y2="442" stroke="var(--line)" stroke-width="1.5"></line>
-        <text transform="translate(38,240) rotate(-90)" text-anchor="middle" fill="#B3AA9B" style="font-family:'Satoshi',sans-serif;font-size:13px;font-weight:500;letter-spacing:.28em;">POWER</text>
+        <text class="t-axis" transform="translate(38,240) rotate(-90)" text-anchor="middle">POWER</text>
 
         <g stroke-linecap="round" fill="none">
           <!-- before: both run heavy and level -->
@@ -363,6 +377,14 @@ a.mh-name:hover{border-color:var(--line);}
           <!-- after: they become what they are -->
           <path class="inv-post" d="M830,252 C878,224 980,118 1086,30" stroke="var(--ink)" stroke-width="6"></path>
           <path class="inv-after-dash" d="M830,252 C885,292 960,350 1086,380" stroke="#C4BCAE" stroke-width="2" stroke-dasharray="9 11"></path>
+        </g>
+
+        <!-- the 2026 marker: the new line arrives first -->
+        <g class="inv-fade dmark">
+          <line x1="830" y1="294" x2="830" y2="442" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="4 7"></line>
+          <line x1="830" y1="442" x2="830" y2="456" stroke="var(--accent)" stroke-width="2"></line>
+          <text class="t-mark2" x="830" y="484" text-anchor="middle">THE OPUS 4.6 MOMENT</text>
+          <text class="t-sub" x="830" y="508" text-anchor="middle">2026 · POSITIONING BECOMES THE SIGNAL</text>
         </g>
 
         <!-- the crossing -->
@@ -376,24 +398,24 @@ a.mh-name:hover{border-color:var(--line);}
         <g class="inv-fade d1">
           <line x1="470" y1="74" x2="470" y2="442" stroke="#C6C2BA" stroke-width="1.2" stroke-dasharray="4 7"></line>
           <line x1="470" y1="442" x2="470" y2="456" stroke="#B9B5AD" stroke-width="1.5"></line>
-          <text x="470" y="484" text-anchor="middle" fill="var(--ink)" style="font-family:'Satoshi',sans-serif;font-size:15px;font-weight:700;letter-spacing:.14em;">THE CHATGPT MOMENT</text>
-          <text x="470" y="508" text-anchor="middle" fill="var(--mid)" style="font-family:'Satoshi',sans-serif;font-size:13px;font-weight:500;letter-spacing:.14em;">2023 · BUILDING BECOMES FREE</text>
+          <text class="t-mark" x="470" y="484" text-anchor="middle">THE CHATGPT MOMENT</text>
+          <text class="t-sub" x="470" y="508" text-anchor="middle">2023 · PRODUCT BECOMES FREE</text>
           <circle cx="470" cy="60" r="13" fill="var(--paper)"></circle>
           <circle cx="470" cy="60" r="8" fill="var(--paper)" stroke="var(--mid)" stroke-width="3"></circle>
         </g>
 
-        <text class="inv-fade d2" x="74" y="22" fill="var(--mid)" style="font-family:'Satoshi',sans-serif;font-size:24px;font-weight:700;letter-spacing:.16em;">PRODUCT</text>
-        <text class="inv-fade d2" x="74" y="422" fill="var(--ink)" style="font-family:'Satoshi',sans-serif;font-size:24px;font-weight:700;letter-spacing:.16em;">POSITIONING</text>
+        <text class="inv-fade d2 t-curve t-prod" x="74" y="22">PRODUCT</text>
+        <text class="inv-fade d2 t-curve t-pos" x="74" y="422">POSITIONING</text>
 
         <g class="inv-fade d4">
           <line x1="762" y1="240" x2="792" y2="248" stroke="var(--accent)" stroke-width="1.4"></line>
-          <text x="754" y="234" text-anchor="end" fill="var(--accent)" style="font-family:'Satoshi',sans-serif;font-size:18px;font-weight:700;letter-spacing:.14em;">THE INVERSION</text>
+          <text class="t-inv" x="754" y="234" text-anchor="end">THE INVERSION</text>
         </g>
         <g class="inv-fade d5">
-          <circle cx="875" cy="218" r="13" fill="var(--paper)"></circle>
-          <circle cx="875" cy="218" r="11" fill="var(--ink)"></circle>
-          <line x1="875" y1="208" x2="875" y2="104" stroke="var(--ink)" stroke-width="1.4"></line>
-          <text x="843" y="90" fill="var(--ink)" style="font-family:'Satoshi',sans-serif;font-size:18px;font-weight:700;letter-spacing:.14em;">WE ARE HERE</text>
+          <circle cx="898" cy="198" r="13" fill="var(--paper)"></circle>
+          <circle cx="898" cy="198" r="11" fill="var(--ink)"></circle>
+          <line x1="898" y1="188" x2="898" y2="80" stroke="var(--ink)" stroke-width="1.4"></line>
+          <text class="t-here" x="866" y="66">WE ARE HERE</text>
         </g>
       </svg>
     </div>
