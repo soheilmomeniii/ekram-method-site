@@ -41,6 +41,25 @@ async function forwardToButtondown(email) {
   }
 }
 
+async function pingTelegram(email, total) {
+  const bot = process.env.TELEGRAM_BOT_TOKEN;
+  const chat = process.env.TELEGRAM_CHAT_ID;
+  if (!bot || !chat) return;
+  try {
+    await fetch(`https://api.telegram.org/bot${bot}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chat,
+        text: `New signup\n${email}${total ? `\n\n${total} total` : ""}`,
+        disable_web_page_preview: true,
+      }),
+    });
+  } catch (e) {
+    console.error("telegram ping failed", e); // never blocks the signup
+  }
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -72,8 +91,13 @@ export default async function handler(req, res) {
 
   try {
     // sorted set, score = signup time, so the list is ordered and deduped
-    await kv(`zadd/subs/${Date.now()}/${encodeURIComponent(email)}`, cfg);
+    const added = await kv(`zadd/subs/${Date.now()}/${encodeURIComponent(email)}`, cfg);
     if (process.env.BUTTONDOWN_API_KEY) await forwardToButtondown(email);
+    if (added) {
+      // only ping for genuinely new addresses, not repeat submits
+      const total = await kv("zcard/subs", cfg).catch(() => null);
+      await pingTelegram(email, total);
+    }
     return res.status(200).json({ ok: true });
   } catch (err) {
     console.error("subscribe failed", err);
