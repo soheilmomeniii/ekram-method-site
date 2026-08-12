@@ -84,8 +84,11 @@ export default async function handler(req, res) {
     else if (process.env.CONVERTKIT_API_KEY && process.env.CONVERTKIT_FORM_ID)
       result = await toConvertKit(email);
     else {
-      console.error("subscribe: no provider configured");
-      return res.status(503).json({ error: "Signups aren't open yet." });
+      // No provider key yet. Don't lose the person: record it in the runtime log
+      // (Vercel → Project → Logs, filter "SUBSCRIBER") and accept the signup.
+      // Remove this branch once a provider key is set.
+      console.log(`SUBSCRIBER ${email} ${new Date().toISOString()}`);
+      return res.status(200).json({ ok: true });
     }
 
     if (!result.ok) {
