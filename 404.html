@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not in the book — The Ekram Method</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F7F4EE">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+@font-face{font-family:'Satoshi';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/satoshi-400.woff2') format('woff2');}
+@font-face{font-family:'Satoshi';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/satoshi-500.woff2') format('woff2');}
+@font-face{font-family:'Sentient';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/sentient-500.woff2') format('woff2');}
+:root{--paper:#F7F4EE;--mid:#6A6258;--ink:#171717;--line:#DED6C9;--accent:#cc1123;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--paper);color:var(--ink);font-family:"Satoshi",system-ui,sans-serif;
+     min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+     text-align:center;padding:40px 22px;-webkit-font-smoothing:antialiased;}
+.mark{width:30px;height:30px;color:var(--ink);opacity:.85;}
+.mark svg{width:100%;height:100%;display:block;}
+.code{font-size:11px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--mid);margin-top:26px;}
+h1{font-family:"Sentient",Georgia,serif;font-weight:500;font-size:clamp(30px,4.4vw,46px);
+   line-height:1.05;letter-spacing:-.018em;margin-top:16px;text-wrap:balance;}
+.rule{width:54px;height:1px;background:var(--line);margin:30px 0;}
+a.home{font-size:11.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);
+       text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:4px;transition:border-color .16s;}
+a.home:hover{border-color:var(--ink);}
+</style>
+</head>
+<body>
+  <span class="mark" aria-hidden="true">
+    <svg viewBox="0 0 200 200" fill="none" stroke="currentColor">
+      <circle cx="100" cy="100" r="92" stroke-width="6" opacity=".85"/>
+      <circle cx="100" cy="100" r="58" stroke-width="7" opacity=".5"/>
+      <circle cx="100" cy="100" r="30" stroke-width="11" opacity=".9"/>
+      <line x1="100" y1="3" x2="100" y2="197" stroke-width="5" opacity=".3"/>
+      <line x1="3" y1="100" x2="197" y2="100" stroke-width="5" opacity=".3"/>
+      <circle cx="100" cy="100" r="10" fill="currentColor" stroke="none"/>
+    </svg>
+  </span>
+  <p class="code">Error 404</p>
+  <h1>This page is not in the book.</h1>
+  <div class="rule"></div>
+  <a class="home" href="/">Back to the beginning</a>
+</body>
+</html>

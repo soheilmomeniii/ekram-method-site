@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900" fill="none">
+  
+  <style>
+ .mono{font-family:'Space Mono',monospace;}
+ .disp{font-family:'Jost',sans-serif;font-weight:600;letter-spacing:0.02em;font-size:104px;}
+</style>
+<rect width="600" height="900" fill="#FCFBF8"></rect>
+        <g stroke-linecap="round">
+          <path d="M-40,406 C130,410 280,462 402,550" stroke="rgba(20,21,15,0.55)" stroke-width="12"></path>
+          <path d="M402,550 C462,594 546,640 660,672" stroke="rgba(20,21,15,0.28)" stroke-width="4.5" stroke-dasharray="10 14"></path>
+          <path d="M-40,686 C140,682 300,636 402,550" stroke="rgba(20,21,15,0.4)" stroke-width="4.5" stroke-dasharray="6 10"></path>
+          <path d="M402,550 C462,508 556,420 660,338" stroke="#14150F" stroke-width="13"></path>
+        </g>
+        <circle cx="402" cy="550" r="30" fill="#FCFBF8"></circle>
+        <circle cx="402" cy="550" r="17" fill="#cc1123"></circle>
+        <line x1="402" y1="456" x2="402" y2="520" stroke="rgba(20,21,15,0.35)" stroke-width="1.2" stroke-dasharray="5 8"></line>
+        <text x="402" y="440" text-anchor="middle" fill="rgba(20,21,15,0.78)" class="mono" style="font-weight:700;font-size:20px;letter-spacing:0.16em;">AI</text>
+        <line x1="402" y1="580" x2="402" y2="646" stroke="#cc1123" stroke-width="1.7"></line>
+        <text x="392" y="676" text-anchor="middle" fill="#cc1123" class="mono" style="font-weight:700;font-size:19px;letter-spacing:0.13em;">THE GREAT INVERSION</text>
+        <path d="M44,720 L44,364" stroke="rgba(20,21,15,0.28)" stroke-width="1.2"></path>
+        <path d="M40,372 L44,358 L48,372 Z" fill="rgba(20,21,15,0.28)"></path>
+        <text transform="translate(30,542) rotate(-90)" text-anchor="middle" fill="rgba(20,21,15,0.55)" class="mono" style="font-weight:700;font-size:14.3px;letter-spacing:0.2em;">POWER</text>
+        <text x="62" y="466" fill="rgba(20,21,15,0.74)" class="mono" style="font-weight:700;font-size:18px;letter-spacing:0.17em;">PRODUCT</text>
+        <text x="62" y="714" fill="#14150F" class="mono" style="font-weight:700;font-size:18px;letter-spacing:0.17em;">POSITIONING</text>
+  <text x="56" y="72" fill="#cc1123" class="mono" style="font-weight:700;font-size:19px;letter-spacing:0.19em;">POSITION TO WIN IN THE AI ERA</text>
+  <text x="56" y="180" fill="#14150F" class="disp">THE</text>
+  <text x="56" y="275" fill="#14150F" class="disp">EKRAM</text>
+  <text x="56" y="371" fill="#14150F" class="disp">METHOD</text>
+  <text x="56" y="812" fill="rgba(20,21,15,0.78)" class="mono" style="font-weight:700;font-size:16.5px;letter-spacing:0.09em;">THE COLLECTED THINKING OF EKRAM</text>
+  <text x="56" y="836" fill="rgba(20,21,15,0.55)" class="mono" style="font-size:16.5px;letter-spacing:0.09em;">COMPILED BY SOMO</text>
+</svg>
